@@ -28,5 +28,7 @@ SciTech Conference 2024)
 
 News
 ======
-Oct 14, 2023 - We submitted our paper titled: "Novel airfoil for enhanced supersonic aerodynamic performance using convex optimization approach"
-Aug 25, 2023 - Our paper got accepted at AIAA Scietech Forum 2024!
+* Oct 14, 2023 - *We submitted our paper titled: **"Novel airfoil for enhanced supersonic aerodynamic performance using convex optimization approach"***
+* Aug 25, 2023 - *Our paper got accepted at AIAA Scietech Forum 2024!*
+* Jan 22, 2023 - *Recieved the **Research Assistance Scholarship** for international students for KFUPM, Aerospace Department*
+* Jan 15, 2023 - *Started my study as a graduate stendt at KFUPM!*
