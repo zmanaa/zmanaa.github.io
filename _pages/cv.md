@@ -7,7 +7,7 @@ redirect_from:
   - /resume
 ---
 
-{% include base_path %}
+[Download Full CV](https://zmanaa.github.io/files/cv.pdf)
 
 Education
 ======
