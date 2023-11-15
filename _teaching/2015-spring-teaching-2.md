@@ -12,5 +12,5 @@ An introductory lab for systems and control theory. The course provide hands-on 
 
 Course Material
 ======
-You can get a glimpse of the course from [here](https://github.com/zmanaa/AE315)
+You can get a glimpse of the course from [here.](https://github.com/zmanaa/AE315)
 
