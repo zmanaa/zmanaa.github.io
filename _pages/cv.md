@@ -67,5 +67,5 @@ Scholarships and Grants
   * King Fahd University for Petroleum and Minerals, Aerospace Engineering department.
 * **Fully Funded Internship Program – 2022**
   * Offered a fully-funded Internship program to conduct research at the National University of Science and Technology, Islamabad, Pakistan. 
-* **Full Undergraduate Scholarship – 2017* 
+* **Full Undergraduate Scholarship – 2017** 
   * University of Science and Technology at Zewail City.
