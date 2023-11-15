@@ -82,13 +82,15 @@ analytics:
 author:
   name             : "Zeyad M. Manaa"
   avatar           : "avatar.png"
-  bio              : "Aerospace Engineering Graduate Student, KFUPM. Interested in the data-driven modeling and control for dynamical systems"
+  bio              : "Aerospace Engineering Graduate Student, KFUPM,
+                      Flight Dynamics and UAVs Lab,
+                      Interested in the data-driven modeling and control for dynamical systems."
   location         : "Eastern, Saudi Arabia"
   employer         :
   pubmed           : 
-  googlescholar    : "https://scholar.google.com/citations?user=pgB1sm8AAAAJ&hl=en"
+  googlescholar    : https://scholar.google.com/citations?user=pgB1sm8AAAAJ&hl=en
   email            : g202216800@kfupm.edu.sa
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
+  researchgate     :  
   uri              :
   bitbucket        :
   codepen          :
@@ -96,13 +98,13 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "https://github.com/zmanaa"
+  github           : https://github.com/zmanaa
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "https://www.linkedin.com/in/zmanaa/"
+  linkedin         : https://www.linkedin.com/in/zmanaa/
   orcid            : 
   pinterest        :
   soundcloud       :
