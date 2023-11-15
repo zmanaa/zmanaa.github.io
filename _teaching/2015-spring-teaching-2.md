@@ -1,20 +1,16 @@
 ---
-title: "Teaching experience 2"
+title: "AE 315 - Systems and Control"
 collection: teaching
-type: "Workshop"
+type: "Undegraduate Lab"
 permalink: /teaching/2015-spring-teaching-1
-venue: "University 1, Department"
-date: 2015-01-01
-location: "City, Country"
+venue: "King Fahd University of Petroleum and Minerals, Aerospace Department"
+date: 2023-07-01
+location: "Dhahran, Saudi Arabia"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
+An introductory lab for systems and control theory. The course provide hands-on experience on multiple software and hardware tools used in control. The main programming language used in the course is MATLAB. Students would use MATLAB for simulations, modeling, and control algorithms developed in the tutorials and assignments. Also, we helped students to conduct physical experiments on devices like quadrotors, flexible beams, and 2 degree-of-freedom quadrotor. 
 
-Heading 1
+Course Material
 ======
+You can get a glimpse of the course from: https://github.com/zmanaa/AE315
 
-Heading 2
-======
-
-Heading 3
-======
