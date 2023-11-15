@@ -1,15 +1,17 @@
 ---
-title: "Paper Title Number 1"
+title: "Data-driven Discovery of The Quadrotor Equations of Motion Via Sparse Identification of Nonlinear Dynamics."
 collection: publications
 permalink: /publication/2009-10-01-paper-title-number-1
-excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2009-10-01
-venue: 'Journal 1'
-paperurl: 'http://academicpages.github.io/files/paper1.pdf'
-citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
+excerpt: 'In this study, we employ the Sparse Identification of Nonlinear Dynamics (SINDy) algorithm to extract a mathematical model solely from data. The influence of the hyperparameter λ on the sparsity of the identified dynamics is discussed. Additionally, we investigate the impact of data size and the time step between snapshots on the discovered model. To serve as a data source, a ground truth mathematical model was derived from the first principals, we focus on modeling the dynamics of a generic 6 Degrees of Freedom (DOF) quadrotor. For the scope of this initial manuscript and for simplicity and algorithm validation purposes, we specifically consider a sub-case of the 6 DOF system for simulation, restricting the quadrotor's motion to a 2-dimensional plane (i.e. 3 DOF). To evaluate the efficacy of the SINDy algorithm, we simulate three cases employing a Proportional-Derivative (PD) controller for the 3 DOF case including different trajectories. The performance of SINDy model is assessed through the evaluation of absolute error metrics and root mean squared error (RMSE). Interestingly, the predicted states exhibit at most a RMSE of order of magnitude approximately 10−4, manifestation of the algorithm's effectiveness. This research highlights the application of the SINDy algorithm in extracting the quadrotor mathematical models from data.'
+date: 2023-08-23
+venue: 'AIAA'
+paperurl: 'http://academicpages.github.io/files/Sindy_paper.pdf'
+citation: 'Z. M. Manaa, M. R. Elbalshy, and A. M. Abdallah, &quot;Data-driven Discovery of The Quadrotor Equations of Motion Via Sparse Identification of Nonlinear Dynamics. &quot; <i>arXiv, May 25, 2023. doi: 
+https://doi.org/10.48550/arXiv.2305.16500.</i>'
 ---
-This paper is about the number 1. The number 2 is left for future work.
+In this study, we employ the Sparse Identification of Nonlinear Dynamics (SINDy) algorithm to extract a mathematical model solely from data. The influence of the hyperparameter λ on the sparsity of the identified dynamics is discussed. Additionally, we investigate the impact of data size and the time step between snapshots on the discovered model. To serve as a data source, a ground truth mathematical model was derived from the first principals, we focus on modeling the dynamics of a generic 6 Degrees of Freedom (DOF) quadrotor. For the scope of this initial manuscript and for simplicity and algorithm validation purposes, we specifically consider a sub-case of the 6 DOF system for simulation, restricting the quadrotor's motion to a 2-dimensional plane (i.e. 3 DOF). To evaluate the efficacy of the SINDy algorithm, we simulate three cases employing a Proportional-Derivative (PD) controller for the 3 DOF case including different trajectories. The performance of SINDy model is assessed through the evaluation of absolute error metrics and root mean squared error (RMSE). Interestingly, the predicted states exhibit at most a RMSE of order of magnitude approximately 10−4, manifestation of the algorithm's effectiveness. This research highlights the application of the SINDy algorithm in extracting the quadrotor mathematical models from data.
 
-[Download paper here](http://academicpages.github.io/files/paper1.pdf)
+[Download paper here](http://academicpages.github.io/files/Sidny_paper.pdf)
 
-Recommended citation: Your Name, You. (2009). "Paper Title Number 1." <i>Journal 1</i>. 1(1).
+Z. M. Manaa, M. R. Elbalshy, and A. M. Abdallah, &quot;Data-driven Discovery of The Quadrotor Equations of Motion Via Sparse Identification of Nonlinear Dynamics. &quot; <i>arXiv, May 25, 2023. doi: 
+https://doi.org/10.48550/arXiv.2305.16500.</i>
