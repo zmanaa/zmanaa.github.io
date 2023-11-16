@@ -5,7 +5,7 @@ permalink: /publication/2009-10-01-paper-title-number-1
 excerpt: ''
 date: 2023-08-23
 venue: 'AIAA'
-paperurl: 'http://academicpages.github.io/files/Sindy_paper.pdf'
+paperurl: ''
 citation: 'Z. M. Manaa, M. R. Elbalshy, and A. M. Abdallah, &quot;Data-driven Discovery of The Quadrotor Equations of Motion Via Sparse Identification of Nonlinear Dynamics. &quot; <i>arXiv, May 25, 2023. doi: 
 https://doi.org/10.48550/arXiv.2305.16500.</i>'
 ---
