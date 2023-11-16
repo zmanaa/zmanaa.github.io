@@ -1,15 +1,14 @@
 ---
-title: "Paper Title Number 2"
+title: "Novel airfoil for enhanced supersonic aerodynamic performance using convex optimization approach"
 collection: publications
 permalink: /publication/2010-10-01-paper-title-number-2
-excerpt: 'This paper is about the number 2. The number 3 is left for future work.'
-date: 2010-10-01
-venue: 'Journal 1'
+excerpt: 'This paper is about finding global optimal airfoil for specific supersonic flight condition. We the linear supersonic flow theory to formulate a convex-optimization problem. We, then, verified the findigs using numerical simulations.'
+date: 2023-10-14
+venue: 'Submitted to Journal of Aerospace Science and Technology'
 paperurl: 'http://academicpages.github.io/files/paper2.pdf'
-citation: 'Your Name, You. (2010). &quot;Paper Title Number 2.&quot; <i>Journal 1</i>. 1(2).'
+citation: 'Z. M. Manaa, N. Qasem, &quot;Novel airfoil for enhanced supersonic aerodynamic performance using convex optimization approach. &quot;(Submitted to J. of Aerospace Science and Technology) 2023'
 ---
-This paper is about the number 2. The number 3 is left for future work.
 
-[Download paper here](http://academicpages.github.io/files/paper2.pdf)
+[Download paper here](http://academicpages.github.io/files/airfoil_paper.pdf)
 
-Recommended citation: Your Name, You. (2010). "Paper Title Number 2." <i>Journal 1</i>. 1(2).
+Recommended citation: Z. M. Manaa, N. Qasem, &quot;Novel airfoil for enhanced supersonic aerodynamic performance using convex optimization approach. &quot;(Submitted to J. of Aerospace Science and Technology)
