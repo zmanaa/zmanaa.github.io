@@ -21,6 +21,7 @@ Dynamical systems, reduced-order modeling, control theory, machine learning, and
 Selected Publications
 ======
 1. **Z. M. Manaa**, M. R. Elbalshy, and A. M. Abdallah, *Data-driven Discovery of The Quadrotor Equations of Motion Via Sparse Identification of Nonlinear Dynamics*. arXiv, Januaey 04, 2024. doi: [https://arc.aiaa.org/doi/10.2514/6.2024-1308](https://arc.aiaa.org/doi/10.2514/6.2024-1308). 
+
 <!---
 2. **Z. M. Manaa**, N. Qasem, *Novel airfoil for enhanced supersonic aerodynamic performance using convex optimization approach*. (Submitted to J. of Aerospace Science and Technology)
 --->
