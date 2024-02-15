@@ -1,4 +1,4 @@
----
+<!---
 title: "Novel airfoil for enhanced supersonic aerodynamic performance using convex optimization approach"
 collection: publications
 permalink: /publication/2010-10-01-paper-title-number-2
@@ -9,5 +9,5 @@ paperurl: ''
 citation: 'Z. M. Manaa, N. Qasem, &quot;Novel airfoil for enhanced supersonic aerodynamic performance using convex optimization approach. &quot;(Submitted to J. of Aerospace Science and Technology) 2023.'
 ---
 
-[Download paper here](http://academicpages.github.io/files/airfoil_paper.pdf)
+[Download paper here](http://academicpages.github.io/files/airfoil_paper.pdf)-->
 
