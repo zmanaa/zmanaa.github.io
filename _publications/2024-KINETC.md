@@ -1,7 +1,7 @@
 ---
 title: "Koopman-LQR Controller for Quadrotors from Data."
 collection: publications
-permalink: /publication/2024-paper-LQR
+permalink: /publication/2024-KINETC
 excerpt: ''
 date: 2023-06-25
 venue: 'IEEE Conference on Smar Mobility'
