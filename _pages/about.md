@@ -8,7 +8,11 @@ redirect_from:
   - /about.html
 ---
 
-I am an aerospace engineering graduate student interested in advancing dynamical systems modeling and control through interdisciplinary research. Currently, I am pursuing a MSc at KFUPM under the supervision of Professor Ayman Abdallah, where my thesis applies data-driven learning techniques for modeling, control, and estimation for dynamical systems (e.g., robotics, quadrotors, and satellites). I am also interested in exploring intersections between machine learning and physics-informed modeling of dynamical systems.
+I am an aerospace engineering graduate student interested in advancing dynamical systems modeling and control through interdisciplinary research. Currently, I am pursuing a MSc at [KFUPM](https://www.kfupm.edu.sa), SA under the supervision of Professor Ayman Abdallah, where my thesis applies data-driven learning techniques for modeling, control, and estimation for dynamical systems (e.g., robotics, quadrotors, and satellites). I am also interested in exploring intersections between machine learning and physics-informed modeling of dynamical systems.
+
+Prior to this I completed my bachelor's degree in Aerospace Engineering from [Zewail City of Science and Technology](https://www.zewailcity.edu.eg), Egypt.
+
+I like calligraphy and typography, something I do to relax and to be present at the moment. You can see sample of my work [here](https://dribbble.com/zeyad_mana3). I also like history, and anthropology. Espicially, how human evolved and invinted many constructs to survive. 
 
 
 Research Direction
