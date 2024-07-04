@@ -6,8 +6,7 @@ excerpt: ''
 date: 2023-08-23
 venue: 'AIAA'
 paperurl: ''
-citation: 'Z. M. Manaa, M. R. Elbalshy, and A. M. Abdallah, &quot;Data-driven Discovery of The Quadrotor Equations of Motion Via Sparse Identification of Nonlinear Dynamics. &quot; <i>arXiv, May 25, 2023. doi: 
-https://doi.org/10.48550/arXiv.2305.16500.</i>'
+citation: 'Manaa, Z.M., Elbalshy, M.R. and Abdallah, A.M., 2024. Data-driven Discovery of The Quadrotor Equations of Motion Via Sparse Identification of Nonlinear Dynamics. In AIAA SCITECH 2024 Forum (p. 1308).'
 ---
 
 Abstract
@@ -16,5 +15,4 @@ In this study, we employ the Sparse Identification of Nonlinear Dynamics (SINDy)
 
 [Download paper here](http://academicpages.github.io/files/Sidny_paper.pdf)
 
-Z. M. Manaa, M. R. Elbalshy, and A. M. Abdallah, &quot;Data-driven Discovery of The Quadrotor Equations of Motion Via Sparse Identification of Nonlinear Dynamics. &quot; <i>arXiv, May 25, 2023. doi: 
-https://doi.org/10.48550/arXiv.2305.16500.</i>
+Manaa, Z.M., Elbalshy, M.R. and Abdallah, A.M., 2024. Data-driven Discovery of The Quadrotor Equations of Motion Via Sparse Identification of Nonlinear Dynamics. In AIAA SCITECH 2024 Forum (p. 1308).
