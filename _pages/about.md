@@ -29,9 +29,9 @@ Selected Publications
 
 News
 ======
-* Jun 16, 2024 - *We submitted our manuscript: **Koopman-LQR Controller for Quadrotor UAVs From Data** to [IEEE International Conference on Smart Mobility](IEEE International Conference on Smart Mobility)*
+* Jun 16, 2024 - *We submitted our manuscript: **Koopman-LQR Controller for Quadrotor UAVs From Data** to [IEEE International Conference on Smart Mobility](https://ieeesm.org)*
 * Jun 09, 2024 - *We submitted our paper titled: **"Optimal Airfoil for Improved Supersonic performance via Convex Optimization Framework"*** to the International Journal of Numerical Methods for Heat and Fluid Flow.
 * Apr 14, 2024 - *Our patent titled: **Efficient Airfoil for Improved Supersonic Performance for Fighters** got filed under ID: 550544US*
-* Aug 25, 2023 - *Our paper got accepted at [https://www.aiaa.org/SciTech](AIAA Scietech Forum 2024)!*
+* Aug 25, 2023 - *Our paper got accepted at [AIAA Scietech Forum 2024](https://www.aiaa.org/SciTech)!*
 * Jan 22, 2023 - *Recieved the **Research Assistance Scholarship** for international students from KFUPM, Aerospace Department!*
 * Jan 15, 2023 - *Started my study as a graduate student at KFUPM!*
