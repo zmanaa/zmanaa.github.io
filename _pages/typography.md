@@ -3,6 +3,9 @@ layout: archive
 title: "Typography"
 permalink: /typography/
 author_profile: true
+redirect_from: 
+  - /typography/
+  - /typography.html
 ---
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
