@@ -25,7 +25,7 @@ Selected Publications
 ======
 1. **Z. M. Manaa**, M. R. Elbalshy, and A. M. Abdallah, *Data-driven Discovery of The Quadrotor Equations of Motion Via Sparse Identification of Nonlinear Dynamics*. In AIAA SCITECH 2024 Forum, p. 1308. 2024. doi: [https://arc.aiaa.org/doi/10.2514/6.2024-1308](https://arc.aiaa.org/doi/10.2514/6.2024-1308).
 2. **Z. M. Manaa**, A. M. Abdallah, M. A. Abido, and S. S. A. Ali *Koopman-LQR for Quadrotor UAVs from Data*. arXiv preprint arXiv:2406.17973. 
-3. **Z. M. Manaa**, A. M. Abdallah, and S. El Ferik *KINETC: Koopman-Inspired Nonlinear Event-Triggered Control from Data*. [Preprint](https://github.com/zmanaa/zmanaa.github.io/edit/master/files/KINETC.pdf) 
+3. **Z. M. Manaa**, A. M. Abdallah, and S. El Ferik *KINETC: Koopman-Inspired Nonlinear Event-Triggered Control from Data*. [Download paper here](http://academicpages.github.io/files/KINETC.pdf)
 
 <!---
 2. **Z. M. Manaa**, N. Qasem, *Novel airfoil for enhanced supersonic aerodynamic performance using convex optimization approach*. (Submitted to J. of Aerospace Science and Technology)
