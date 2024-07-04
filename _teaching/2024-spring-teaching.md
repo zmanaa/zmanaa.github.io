@@ -13,7 +13,7 @@ control theory. Modern control theory and application to autopilot design. Numer
 
 Duties
 ======
-- Conducted recitation and practical sessions
+- Conducted recitation and practical sessions ([Example session](https://zmanaa.github.io/files/AE_540__Recitation.pdf))
 - Commuincate back and forth with feedbacks on the research projects conducted by the students
 - Grading assignments and progress reports
 
