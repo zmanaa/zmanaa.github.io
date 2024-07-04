@@ -1,5 +1,5 @@
 ---
-title: "KINETC -- Koopman-Inspired Nonlinear Event-Triggered Control from Data"
+title: 'KINETC -- Koopman-Inspired Nonlinear Event-Triggered Control from Data'
 collection: publications
 permalink: /publication/2024-KINETC
 excerpt: ''
