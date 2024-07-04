@@ -20,7 +20,8 @@ Dynamical systems, reduced-order modeling, control theory, machine learning, and
 
 Selected Publications
 ======
-1. **Z. M. Manaa**, M. R. Elbalshy, and A. M. Abdallah, *Data-driven Discovery of The Quadrotor Equations of Motion Via Sparse Identification of Nonlinear Dynamics*. arXiv, Januaey 04, 2024. doi: [https://arc.aiaa.org/doi/10.2514/6.2024-1308](https://arc.aiaa.org/doi/10.2514/6.2024-1308). 
+1. **Z. M. Manaa**, M. R. Elbalshy, and A. M. Abdallah, *Data-driven Discovery of The Quadrotor Equations of Motion Via Sparse Identification of Nonlinear Dynamics*. In AIAA SCITECH 2024 Forum, p. 1308. 2024. doi: [https://arc.aiaa.org/doi/10.2514/6.2024-1308](https://arc.aiaa.org/doi/10.2514/6.2024-1308).
+2. **Z. M. Manaa**, A. M. Abdallah, M. A. Abido, and S. S. A. Ali *Koopman-LQR for Quadrotor UAVs from Data*. arXiv preprint arXiv:2406.17973. 
 
 <!---
 2. **Z. M. Manaa**, N. Qasem, *Novel airfoil for enhanced supersonic aerodynamic performance using convex optimization approach*. (Submitted to J. of Aerospace Science and Technology)
@@ -28,7 +29,9 @@ Selected Publications
 
 News
 ======
-* Oct 14, 2023 - *We submitted our paper titled: **"Novel airfoil for enhanced supersonic aerodynamic performance using convex optimization approach"*** to J. of Aersopace Science and Technology.
-* Aug 25, 2023 - *Our paper got accepted at AIAA Scietech Forum 2024!*
+* Jun 16, 2024 - *We submitted our manuscript: **Koopman-LQR Controller for Quadrotor UAVs From Data** to [IEEE International Conference on Smart Mobility](IEEE International Conference on Smart Mobility)*
+* Jun 09, 2024 - *We submitted our paper titled: **"Optimal Airfoil for Improved Supersonic performance via Convex Optimization Framework"*** to the International Journal of Numerical Methods for Heat and Fluid Flow.
+* Apr 14, 2024 - *Our patent titled: **Efficient Airfoil for Improved Supersonic Performance for Fighters** got filed under ID: 550544US*
+* Aug 25, 2023 - *Our paper got accepted at [https://www.aiaa.org/SciTech](AIAA Scietech Forum 2024)!*
 * Jan 22, 2023 - *Recieved the **Research Assistance Scholarship** for international students from KFUPM, Aerospace Department!*
 * Jan 15, 2023 - *Started my study as a graduate student at KFUPM!*
