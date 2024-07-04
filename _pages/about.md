@@ -32,11 +32,33 @@ Selected Publications
 
 News
 ======
-| Jul 04, 2024   | Finished working on our project **KINETC: Koopman-Inspired Nonlinear Event-Triggered Control from Data**                                                                                    |
-| Jun 16, 2024   | We submitted our manuscript: **Koopman-LQR Controller for Quadrotor UAVs From Data** to [IEEE International Conference on Smart Mobility](https://ieeesm.org)                                |
-| Jun 09, 2024   | We submitted our manuscript: **Optimal Airfoil for Improved Supersonic performance via Convex Optimization Framework** to the International Journal of Numerical Methods for Heat and Fluid Flow |
-| Apr 14, 2024   | Our patent titled: **Efficient Airfoil for Improved Supersonic Performance for Fighters** got filed under ID: 550544US                                                                     |
-| Aug 25, 2023   | Our paper got accepted at [AIAA SciTech Forum 2024](https://www.aiaa.org/SciTech)!                                                                                                          |
-| Jan 22, 2023   | Received the **Research Assistance Scholarship** for international students from KFUPM, Aerospace Department!                                                                              |
-| Jan 15, 2023   | Started my study as a graduate student at KFUPM!                                                                                                                                            |
-
+<table>
+  <tr>
+    <td>Jul 04, 2024</td>
+    <td>Finished working on our project <b>KINETC: Koopman-Inspired Nonlinear Event-Triggered Control from Data</b></td>
+  </tr>
+  <tr>
+    <td>Jun 16, 2024</td>
+    <td>We submitted our manuscript: <b>Koopman-LQR Controller for Quadrotor UAVs From Data</b> to <a href="https://ieeesm.org">IEEE International Conference on Smart Mobility</a></td>
+  </tr>
+  <tr>
+    <td>Jun 09, 2024</td>
+    <td>We submitted our manuscript: <b>Optimal Airfoil for Improved Supersonic performance via Convex Optimization Framework</b> to the International Journal of Numerical Methods for Heat and Fluid Flow</td>
+  </tr>
+  <tr>
+    <td>Apr 14, 2024</td>
+    <td>Our patent titled: <b>Efficient Airfoil for Improved Supersonic Performance for Fighters</b> got filed under ID: 550544US</td>
+  </tr>
+  <tr>
+    <td>Aug 25, 2023</td>
+    <td>Our paper got accepted at <a href="https://www.aiaa.org/SciTech">AIAA SciTech Forum 2024</a>!</td>
+  </tr>
+  <tr>
+    <td>Jan 22, 2023</td>
+    <td>Received the <b>Research Assistance Scholarship</b> for international students from KFUPM, Aerospace Department!</td>
+  </tr>
+  <tr>
+    <td>Jan 15, 2023</td>
+    <td>Started my study as a graduate student at KFUPM!</td>
+  </tr>
+</table>
