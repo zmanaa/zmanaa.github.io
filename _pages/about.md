@@ -32,10 +32,11 @@ Selected Publications
 
 News
 ======
-| Jul 04, 2024   | *Finished working on our project **KINETC: Koopman-Inspired Nonlinear Event-Triggered Control from Data*** |
-| Jun 16, 2024   | *We submitted our manuscript: **Koopman-LQR Controller for Quadrotor UAVs From Data** to [IEEE International Conference on Smart Mobility](https://ieeesm.org)*|
-| Jun 09, 2024   | *We submitted our manuscript: **Optimal Airfoil for Improved Supersonic performance via Convex Optimization Framework** to the International Journal of Numerical Methods for Heat and Fluid Flow.* |
-| Apr 14, 2024   | *Our patent titled: **Efficient Airfoil for Improved Supersonic Performance for Fighters** got filed under ID: 550544US*|
-| Aug 25, 2023   | *Our paper got accepted at [AIAA SciTech Forum 2024](https://www.aiaa.org/SciTech)!*|
-| Jan 22, 2023   | *Received the **Research Assistance Scholarship** for international students from KFUPM, Aerospace Department!*|
-| Jan 15, 2023   | *Started my study as a graduate student at KFUPM!*|
+| Jul 04, 2024   | Finished working on our project **KINETC: Koopman-Inspired Nonlinear Event-Triggered Control from Data**                                                                                    |
+| Jun 16, 2024   | We submitted our manuscript: **Koopman-LQR Controller for Quadrotor UAVs From Data** to [IEEE International Conference on Smart Mobility](https://ieeesm.org)                                |
+| Jun 09, 2024   | We submitted our manuscript: **Optimal Airfoil for Improved Supersonic performance via Convex Optimization Framework** to the International Journal of Numerical Methods for Heat and Fluid Flow |
+| Apr 14, 2024   | Our patent titled: **Efficient Airfoil for Improved Supersonic Performance for Fighters** got filed under ID: 550544US                                                                     |
+| Aug 25, 2023   | Our paper got accepted at [AIAA SciTech Forum 2024](https://www.aiaa.org/SciTech)!                                                                                                          |
+| Jan 22, 2023   | Received the **Research Assistance Scholarship** for international students from KFUPM, Aerospace Department!                                                                              |
+| Jan 15, 2023   | Started my study as a graduate student at KFUPM!                                                                                                                                            |
+
