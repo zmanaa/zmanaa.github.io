@@ -8,15 +8,14 @@ redirect_from:
   - /about.html
 ---
 
-I am an aerospace engineering graduate student interested in advancing dynamical systems modeling and control through interdisciplinary research. Currently, I am pursuing a MSc at KFUPM under the supervision of Professor Ayman Abdallah, where my thesis applies data-driven and machine learning techniques to linear and nonlinear systems identification.
-
-Beyond aerospace, I am interested in extending control-oriented modeling approaches to other fields. I am also exploring intersections between machine learning and physics-informed modeling of dynamical systems.
-
+I am an aerospace engineering graduate student interested in advancing dynamical systems modeling and control through interdisciplinary research. Currently, I am pursuing a MSc at KFUPM under the supervision of Professor Ayman Abdallah, where my thesis applies data-driven learning techniques for modeling, control, and estimation for dynamical systems (e.g., robotics, quadrotors, and satellites). I am also interested in exploring intersections between machine learning and physics-informed modeling of dynamical systems.
 
 
 Research Direction
 ======
-Dynamical systems, reduced-order modeling, control theory, machine learning, and optimization.
+1. Data-driven modeling and control of dynamical systems
+2. Control theory, and optimization
+3. Model reduction, and feedback control of dynamical systems
 
 Selected Publications
 ======
