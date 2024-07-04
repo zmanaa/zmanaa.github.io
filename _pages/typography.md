@@ -1,16 +1,25 @@
 ---
-title: "Page Not Found"
-excerpt: "Page not found. Your pixels are in another canvas."
+title: "Typography"
 sitemap: false
-permalink: /404.html
+permalink: /typography.html
 ---
 
-Sorry, but the page you were trying to view does not exist --- perhaps you can try searching for it below.
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
 
-<script type="text/javascript">
-  var GOOG_FIXURL_LANG = 'en';
-  var GOOG_FIXURL_SITE = '{{ site.url }}'
-</script>
-<script type="text/javascript"
-  src="//linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js">
-</script>
+  <div style="flex: 1 1 calc(33.333% - 10px);">
+    <img src="/images/1.png" alt="Image 1" style="width: 100%;">
+  </div>
+
+  <div style="flex: 1 1 calc(33.333% - 10px);">
+    <img src="/images/2.jpeg" alt="Image 2" style="width: 100%;">
+  </div>
+
+  <div style="flex: 1 1 calc(33.333% - 10px);">
+    <img src="/images/3.png" alt="Image 3" style="width: 100%;">
+  </div>
+
+  <div style="flex: 1 1 calc(33.333% - 10px);">
+    <img src="/images/4.jpeg" alt="Image 4" style="width: 100%;">
+  </div>
+
+</div>
