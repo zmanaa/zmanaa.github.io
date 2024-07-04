@@ -47,7 +47,7 @@ News
   </tr>
   <tr>
     <td>Apr 14, 2024</td>
-    <td>Our patent titled: <b>Efficient Airfoil for Improved Supersonic Performance for Fighters</b> got filed under ID: 550544US</td>
+    <td>Our patent titled: <b>Optimal Airfoil for Improved Supersonic Performance for Specific Predefined Flight Conditions</b> got filed under ID: 550544US</td>
   </tr>
   <tr>
     <td>Aug 25, 2023</td>
