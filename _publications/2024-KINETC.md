@@ -1,7 +1,7 @@
 ---
 title: "KINETC: Koopman-Inspired Nonlinear Event-Triggered Control from Data"
 collection: publications
-permalink: /publication/KINETC
+permalink: /publication/2024-KINETC
 excerpt: ''
 date: 2023-07-01
 venue: 'IEEE'
