@@ -5,7 +5,7 @@ permalink: /publication/2024-KINETC
 excerpt: ''
 date: 2024-06-25
 venue: ''
-paperurl: 'https://zmanaa.github.io/files/KINETC.pdf'
+paperurl: ''
 citation: 'Manaa, Z.M., Abdallah, A.M., and El Ferik, S., 2024. KINETC: Koopman-Inspired Nonlinear Event-Triggered Control from Data.'
 ---
 
