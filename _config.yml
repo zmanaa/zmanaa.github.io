@@ -228,15 +228,15 @@ defaults:
       author_profile: true
       share: true
       comments: true
-  # _typography
-  - scope:
-      path: ""
-      type: typography
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
+  # # _typography
+  # - scope:
+  #     path: ""
+  #     type: typography
+  #   values:
+  #     layout: single
+  #     author_profile: true
+  #     share: true
+  #     comments: true
     
   # _portfolio
  # - scope:
