@@ -5,7 +5,7 @@ permalink: /publication/2024-KINETC
 excerpt: ''
 date: 2024-06-25
 venue: ''
-paperurl: ''
+paperurl: 'https://zmanaa.github.io/files/KINETC.pdf'
 citation: 'Manaa, Z.M., Abdallah, A.M., and El Ferik, S., 2024. KINETC: Koopman-Inspired Nonlinear Event-Triggered Control from Data.'
 ---
 
@@ -26,6 +26,6 @@ from Data (KINETC) method is validated through extensive sim-
 ulation experiments, demonstrating significant resource savings
 by reducing the communication instances by 40%.
 
-[Download here](http://zmmanaa.github.io/files/KINETC.pdf)
+[Download here](https://zmanaa.github.io/files/KINETC.pdf)
 
 Manaa, Z.M., Abdallah, A.M., and El Ferik, S., 2024. KINETC: Koopman-Inspired Nonlinear Event-Triggered Control from Data.
