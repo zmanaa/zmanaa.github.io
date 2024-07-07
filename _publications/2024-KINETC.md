@@ -44,7 +44,7 @@ x_2
 \end{bmatrix}
 \end{align}
 
-In this scenario, there exists a polynomial stable manifold defined as \(x_2 = x_1^2\). 
+In this scenario, there exists a polynomial stable manifold defined as $x_2 = x_1^2$. 
 Within the Koopman-inspired framework, if the correct lifting observable functions were chosen such that $\Xi(x) = \mat{x_1, ~ x_2, ~ x_1^2}$, the nonlinear system in (\ref{eqn:nonlinear_ex}) can be expressed linearly as
 \begin{align}
 \begin{bmatrix}
