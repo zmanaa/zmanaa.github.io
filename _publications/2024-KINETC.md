@@ -32,6 +32,7 @@ Main Findigs
 ======
 We consider a case of a nonlinear system with a slow manifold inspired by an example from Brunton et al. (2016):
 
+```markdown
 \[
 \begin{align}
 \begin{bmatrix}
@@ -71,7 +72,6 @@ z_3
 \]
 
 Considering the parameters, \(\rho = 0.6\), and \(\kappa = 1.2\) for the system, the eigenvalues of the system are \(\lambda_1 = 0.6\), \(\lambda_2 = 1.2\), and \(\lambda_3 = 0.36\). Since \(\lambda_2 > 1\), the system exhibits instability, and the goal is to stabilize it to the origin.
-
 
 
 Please refer to section IV of the paper for full discussion of the results. 
