@@ -30,9 +30,10 @@ by reducing the communication instances by 40%.
 
 Main Findigs
 ======
-We consider a case of nonlinear system with slow manifold inspired by an example from \cite{brunton2016koopman}:
+We consider a case of a nonlinear system with a slow manifold inspired by an example from Brunton et al. (2016):
+
+\[
 \begin{align}
-\label{eqn:nonlinear_ex}
 \begin{bmatrix}
 x_1 \\
 x_2
@@ -43,9 +44,12 @@ x_2
 \kappa x_2 + (\rho^2 - \kappa) x_1^2 + u
 \end{bmatrix}
 \end{align}
+\]
 
-In this scenario, there exists a polynomial stable manifold defined as $x_2 = x_1^2$. 
-Within the Koopman-inspired framework, if the correct lifting observable functions were chosen such that $\Xi(x) = \mat{x_1, ~ x_2, ~ x_1^2}$, the nonlinear system in (\ref{eqn:nonlinear_ex}) can be expressed linearly as
+In this scenario, there exists a polynomial stable manifold defined as \(x_2 = x_1^2\). 
+Within the Koopman-inspired framework, if the correct lifting observable functions are chosen such that \(\Xi(x) = [x_1, \, x_2, \, x_1^2]\), the nonlinear system in (\ref{eqn:nonlinear_ex}) can be expressed linearly as
+
+\[
 \begin{align}
 \begin{bmatrix}
 z_1 \\
@@ -62,9 +66,12 @@ z_3
 z_1 \\
 z_2 \\
 z_3
-\end{bmatrix}_k + \mat{0\\1\\0} u_k
+\end{bmatrix}_k + \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} u_k
 \end{align}
-Considering the parameters, $\rho = 0.6$, and $\kappa = 1.2$ for the system, the eigenvalues of the system are $\lambda_1 = 0.6$, $\lambda_2 = 1.2$, and $\lambda_3 = 0.36$. Since $\lambda_2 > 1$, the system exhibits instability, and the goal is to stabilize it to the origin.
+\]
+
+Considering the parameters, \(\rho = 0.6\), and \(\kappa = 1.2\) for the system, the eigenvalues of the system are \(\lambda_1 = 0.6\), \(\lambda_2 = 1.2\), and \(\lambda_3 = 0.36\). Since \(\lambda_2 > 1\), the system exhibits instability, and the goal is to stabilize it to the origin.
+
 
 
 Please refer to section IV of the paper for full discussion of the results. 
