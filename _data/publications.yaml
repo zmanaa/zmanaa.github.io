@@ -1,17 +1,10 @@
 papers:
   - title: "Koopman-LQR Controller for Quadrotor UAVs from Data"
-    image: "/assets/publications/2024_Koopman_LQR/figure1.png"
+    image: "/assets/publications/2024_Koopman_LQR/figure1.jpeg"
     authors: "<b>Zeyad M. Manaa</b>, Ayman M. Abdallah, Mohammad A. Abido, Syed Saad A. Ali"
     venue: "Preprint"
     paper_pdf: "https://arxiv.org/pdf/2406.17973"
-    poster: "/assets/publications/2023_Koopman_LQR/poster.pdf"
+    poster: "/assets/publications/2024_Koopman_LQR/poster.pdf"
     bibtex: "/assets/publications/2024_Koopman_LQR/bibtex.txt"
     selected: y
 
-  - title: "Schema-Driven Information Extraction from Heterogeneous Tables"
-    image: "/assets/publications/2023_schema-to-json/schema-to-json.png"
-    authors: "Fan Bai, <b>Junmo Kang</b>, Gabriel Stanovsky, Dayne Freitag, Mark Dredze, Alan Ritter"
-    venue: "Preprint"
-    paper_pdf: "https://arxiv.org/pdf/2305.14336.pdf"
-    bibtex: "/assets/publications/2023_schema-to-json/bibtex.txt"
-    selected: y
