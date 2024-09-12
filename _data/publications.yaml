@@ -1,10 +1,17 @@
 papers:
+  - title: "Optimum Configuration for Hovering n-Quadrotors carrying a Slung Payload"
+    image: "/assets/publications/2024_KINETC/image.png"
+    authors: "Mohssen E. Elshaar, Pansie A. khodary, Meral L. Badr, Mohamad A. Sayegh, <b>Zeyad M. Manaa</b>, Ayman M. Abdallah"
+    venue: "Preprint, accepted at AIAA SCITECH 2025"
+    bibtex: "/assets/publications/2025_Slung/bibtex.txt"
+    selected: y
+
   - title: "KINETC: Koopman-Inspired Nonlinear Event-Triggered Control from Data"
     image: "/assets/publications/2024_KINETC/image.png"
     authors: "<b>Zeyad M. Manaa</b>, Ayman M. Abdallah, Sami El-Ferik"
     venue: "Preprint"
-    bibtex: "/assets/publications/2024_KINETC/bibtex.txt"
     paper_pdf: "/assets/publications/2024_KINETC/_Jour__KINETC__Koopman_Inspired_Nonlinear_Event_Triggered_Control_from_Data.pdf"
+    bibtex: "/assets/publications/2024_KINETC/bibtex.txt"
     selected: y
 
   - title: "Novel airfoil for improved supersonic aerodynamic performance"
