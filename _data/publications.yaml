@@ -1,6 +1,6 @@
 papers:
   - title: "Novel airfoil for improved supersonic aerodynamic performance"
-    image: "/assets/publications/2024_Airfoil/fig"
+    image: "/assets/publications/2024_Airfoil/fig.png"
     authors: "<b>Zeyad M. Manaa</b>, Naef A.A. Qasem"
     venue: "International Journal of Numerical Methods for Heat & Fluid Flow"
     bibtex: "/assets/publications/2024_Airfoil/bibtex.txt"
