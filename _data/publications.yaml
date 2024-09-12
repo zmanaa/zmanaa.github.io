@@ -1,10 +1,11 @@
 papers:
 papers:
   - title: "KINETC: Koopman-Inspired Nonlinear Event-Triggered Control from Data"
-    image: "/assets/publications/2024_Airfoil/fig.png"
+    image: "/assets/publications/2024_KINETC/image.png"
     authors: "<b>Zeyad M. Manaa</b>, Ayman M. Abdallah, Sami El-Ferik"
     venue: "Preprint"
-    bibtex: "/assets/publications/2024_Airfoil/bibtex.txt"
+    bibtex: "/assets/publications/2024_KINETC/bibtex.txt"
+    paper_pdf: "/assets/publications/2024_KINETC/_Jour__KINETC__Koopman_Inspired_Nonlinear_Event_Triggered_Control_from_Data.pdf"
     selected: y
 
   - title: "Novel airfoil for improved supersonic aerodynamic performance"
