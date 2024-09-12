@@ -1,0 +1,6 @@
+@article{manaa2024koopman,
+  title={Koopman-LQR Controller for Quadrotor UAVs from Data},
+  author={Manaa, Zeyad M and Abdallah, Ayman M and Abido, Mohammad A and Ali, Syed S Azhar},
+  journal={arXiv preprint arXiv:2406.17973},
+  year={2024}
+}

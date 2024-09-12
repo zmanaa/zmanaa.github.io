@@ -1,10 +1,11 @@
 papers:
-  - title: "Self-MoE: Towards Compositional Large Language Models with Self-Specialized Experts"
-    image: "/assets/publications/2024_self-moe/figure1.png"
-    authors: "<b>Junmo Kang</b>, Leonid Karlinsky, Hongyin Luo, Zhen Wang, Jacob Hansen, James Glass, David Cox, Rameswar Panda, Rogerio Feris, Alan Ritter"
+  - title: "Koopman-LQR Controller for Quadrotor UAVs from Data"
+    image: "/assets/publications/2024_Koopman_LQR/figure1.png"
+    authors: "<b>Zeyad M. Manaa</b>, Ayman M. Abdallah, Mohammad A. Abido, Syed Saad A. Ali"
     venue: "Preprint"
-    paper_pdf: "https://arxiv.org/pdf/2406.12034"
-    bibtex: "/assets/publications/2024_self-moe/bibtex.txt"
+    paper_pdf: "https://arxiv.org/pdf/2406.17973"
+    poster: "/assets/publications/2023_Koopman_LQR/poster.pdf"
+    bibtex: "/assets/publications/2024_Koopman_LQR/bibtex.txt"
     selected: y
 
   - title: "Schema-Driven Information Extraction from Heterogeneous Tables"
