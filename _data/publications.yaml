@@ -1,11 +1,4 @@
 papers:
-  - title: "Optimum Configuration for Hovering n-Quadrotors carrying a Slung Payload"
-    image: "/assets/publications/2025_Slung/alpha_r.jpg"
-    authors: "Mohssen E. Elshaar, Pansie A. khodary, Meral L. Badr, Mohamad A. Sayegh, <b>Zeyad M. Manaa</b>, Ayman M. Abdallah"
-    venue: "Preprint, accepted at AIAA SCITECH 2025"
-    bibtex: "/assets/publications/2025_Slung/bibtex.txt"
-    selected: y
-
   - title: "KINETC: Koopman-Inspired Nonlinear Event-Triggered Control from Data"
     image: "/assets/publications/2024_KINETC/image.png"
     authors: "<b>Zeyad M. Manaa</b>, Ayman M. Abdallah, Sami El-Ferik"
@@ -37,6 +30,20 @@ papers:
     paper_pdf: "https://arxiv.org/pdf/2305.16500"
     poster: "/assets/publications/2024_SINDy/poster.pdf"
     bibtex: "/assets/publications/2024_SINDy/bibtex.txt"
+    selected: y
+
+    - title: "Optimum Configuration for Hovering n-Quadrotors carrying a Slung Payload"
+    image: "/assets/publications/2025_Slung/alpha_r.jpg"
+    authors: "Mohssen E. Elshaar, Pansie A. khodary, Meral L. Badr, Mohamad A. Sayegh, <b>Zeyad M. Manaa</b>, Ayman M. Abdallah"
+    venue: "Preprint, accepted at AIAA SCITECH 2025"
+    bibtex: "/assets/publications/2025_Slung/bibtex.txt"
+    selected: y
+
+    - title: "  Dynamic Stability Performance Analysis of The BWB Skywalker X-8"
+    image: "/assets/publications/2025_Sky/image.png"
+    authors: "Taha Najam, Anafi Sheriffdeen Olayinka, Abdul Motayib, Moses James Kehinde, Syed Saad A. Ali, <b>Zeyad M. Manaa</b>, Ayman M. Abdallah"
+    venue: "Preprint, accepted at AIAA SCITECH 2025"
+    bibtex: "/assets/publications/2025_Sky/bibtex.txt"
     selected: y
 
 

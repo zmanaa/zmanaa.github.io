@@ -1,0 +1,6 @@
+@article{sheriffdeen2025stab,
+  title={{Enhanced Stability and Aerodynamic Performance of Skywalker {X8} {UAV} via V-Tail Integration: A Comprehensive Modeling and Analysis Using {OpenVSP} Software}},
+  author={Sheriffdeen, Anafi and Najam, Taha and Pampori, Abdul and Ali, Syed Saad A. and Manaa, Zeyad M. and M. Abdallah, Ayman},
+  journal={AIAA SCITECH},
+  year={2025},
+}

@@ -1,6 +1,6 @@
 @article{mohssen2025quad,
   title={{Optimum Configuration for Hovering $n$-Quadrotors carrying a Slung Payload}},
-  author={Elshaar, Mohssen E and Elkhodary, Pansie and Badr, Meral and Sayegh, Mohammed, Zeyad M. Manaa, Ayman M. Abdallah},
+  author={Elshaar, Mohssen E and Elkhodary, Pansie and Badr, Meral and Sayegh, Mohammed and Manaa, Zeyad M. and Abdallah, Ayman M.},
   journal={AIAA SCITECH 2025},
   year={2025},
 }
