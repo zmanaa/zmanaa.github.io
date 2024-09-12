@@ -1,7 +1,7 @@
 papers:
   - title: "Novel airfoil for improved supersonic aerodynamic performance"
-    image: "/assets/publications/2024_Airfoil/fig.jpeg"
-    authors: "<b>Zeyad M. Manaa</b>, Ayman M. Abdallah, Mohammad A. Abido, Syed Saad A. Ali"
+    image: "/assets/publications/2024_Airfoil/fig"
+    authors: "<b>Zeyad M. Manaa</b>, Naef A.A. Qasem"
     venue: "International Journal of Numerical Methods for Heat & Fluid Flow"
     bibtex: "/assets/publications/2024_Airfoil/bibtex.txt"
     selected: y
