@@ -8,3 +8,13 @@ papers:
     bibtex: "/assets/publications/2024_Koopman_LQR/bibtex.txt"
     selected: y
 
+  - title: "Data-driven Discovery of The Quadrotor Equations of Motion Via Sparse Identification of Nonlinear Dynamics"
+    image: "/assets/publications/2024_Koopman_LQR/figure1.jpeg"
+    authors: "<b>Zeyad M. Manaa</b>, Ayman M. Abdallah, Mohammad A. Abido, Syed Saad A. Ali"
+    venue: "Preprint"
+    paper_pdf: "https://arxiv.org/pdf/2406.17973"
+    poster: "/assets/publications/2024_Koopman_LQR/poster.pdf"
+    bibtex: "/assets/publications/2024_Koopman_LQR/bibtex.txt"
+    selected: y
+
+
