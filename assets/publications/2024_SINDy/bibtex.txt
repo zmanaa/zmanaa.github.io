@@ -1,0 +1,7 @@
+@inproceedings{manaa2024data,
+  title={Data-driven Discovery of The Quadrotor Equations of Motion Via Sparse Identification of Nonlinear Dynamics},
+  author={Manaa, Zeyad M and Elbalshy, Mohammed R and Abdallah, Ayman M},
+  booktitle={AIAA SCITECH 2024 Forum},
+  pages={1308},
+  year={2024}
+}

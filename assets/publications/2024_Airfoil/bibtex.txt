@@ -1,0 +1,7 @@
+@article{manaa2024novel,
+  title={Novel airfoil for improved supersonic aerodynamic performance},
+  author={Manaa, Zeyad M and Qasem, Naef AA},
+  journal={International Journal of Numerical Methods for Heat \& Fluid Flow},
+  year={2024},
+  publisher={Emerald Publishing Limited}
+}
