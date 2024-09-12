@@ -1,4 +1,4 @@
-# Junmo Kang's Website (based on Martin Saveski's template)
+# Zeyad Manaa's Website (Last Update Sep 12, 2024)
 
 ## Updates guide
 Change one of the files in `_data`, unless you are changing the look of the website.

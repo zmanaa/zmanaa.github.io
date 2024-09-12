@@ -1,10 +1,10 @@
 name: "Zeyad Manaa"
 title: "M.Sc. Student, KFUPM"
-dept: "School of Aerospace Engineering"
+dept: "Aerospace Engineering"
 office: "Bldg. 62, 254"
 email: "zmmanaa [AT] gmail.com"
-profile_pic: "/assets/Personal_image.jpeg"
-twitter: 
+profile_pic: "/assets/imgs/Personal_image.jpeg"
+#twitter: 
 cv: "assets/cv/CV.pdf"
 semantic_scholar: "https://www.semanticscholar.org/author/Zeyad-M.-Manaa/2219185727"
 google_scholar: "https://scholar.google.com/citations?user=pgB1sm8AAAAJ&hl=en"
