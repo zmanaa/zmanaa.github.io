@@ -5,7 +5,7 @@ courses:
     date: "July 1, 2023"
     location: "Dhahran, Saudi Arabia"
     description: "An introductory course for Aircraft Flight Mechanics. The course provides theoretical knowledge in flight mechanics, covering topics such as static and dynamic aircraft stability analysis, deriving the equations of motion, dynamics linearization, and the application of classical and modern control theory to flight mechanics. Students engage in various simulation analyses using MATLAB."
-    image: "path/to/image.jpg" 
+    image: "/assets/imgs/teaching/sr71.webp" 
 
   - title: "AE 315 - Systems and Control"
     type: "Undergraduate lab, instructor"
