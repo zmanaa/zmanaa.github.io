@@ -162,15 +162,15 @@ layout: default
               <p>Location: {{ course.location }}</p>
               <p>Date: {{ course.date }}</p>
               <p>{{ course.description }}</p>
-            </div>
-            <div class="course-buttons">
-              {% if course.material %}
-                <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Sample Material</a>
-              {% endif %}
-
-              {% if course.bibtex %}
-                <a class="button" href="{{ paper.bibtex }}" target="_blank">BibTeX</a>
-              {% endif %}
+              <div class="course-buttons">
+                {% if course.material %}
+                  <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Sample Material</a>
+                {% endif %}
+  
+                {% if course.bibtex %}
+                  <a class="button" href="{{ paper.bibtex }}" target="_blank">BibTeX</a>
+                {% endif %}
+              </div>
             </div>
           </div>
         </div>
