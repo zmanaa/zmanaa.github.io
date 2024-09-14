@@ -164,11 +164,11 @@ layout: default
               <p>{{ course.description }}</p>
               <div class="course-buttons">
                 {% if course.material %}
-                  <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Sample Material</a>
+                  <a class="button" href="{{ course.slides | prepend: site.baseurl }}" target="_blank">Sample Material</a>
                 {% endif %}
   
                 {% if course.bibtex %}
-                  <a class="button" href="{{ paper.bibtex }}" target="_blank">BibTeX</a>
+                  <a class="button" href="{{ course.bibtex }}" target="_blank">BibTeX</a>
                 {% endif %}
               </div>
             </div>
