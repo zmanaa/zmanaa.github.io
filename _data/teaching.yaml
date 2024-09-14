@@ -22,9 +22,4 @@ courses:
       date: "January 15, 2024"
       location: "Dhahran, Saudi Arabia"
       description: "A course to review the equations of motion, static and dynamic stability, response to control or inputs. Covers classical and modern control theory and application to autopilot design, with numerical solutions in flight dynamics and control."
-      material_link: "/assets/publications/2024_KINETC/bibtex.txt"
-      duties:
-        - "Conducted recitation and practical sessions"
-        - "Communicated feedback on the research projects conducted by the students"
-        - "Graded assignments and progress reports"
       image: "path/to/image.jpg"
