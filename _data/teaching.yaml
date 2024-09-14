@@ -14,7 +14,7 @@ courses:
     location: "Dhahran, Saudi Arabia"
     description: "An introductory lab for systems and control theory. The course provides hands-on experience with various software and hardware tools used in control. The main programming language used is MATLAB for simulations, modeling, and control algorithms developed in tutorials and assignments. Students also conduct physical experiments on devices like quadrotors, flexible beams, and 2-degree-of-freedom quadrotors."
     material_link: "https://github.com/zmanaa/AE315"
-    image: "path/to/image.jpg"
+    image: "/assets/imgs/teaching/control.png"
 
   - title: "AE 540 - Flight Dynamics and Control I"
     type: "Graduate course, teaching assistant"
@@ -22,4 +22,4 @@ courses:
     date: "January 15, 2024"
     location: "Dhahran, Saudi Arabia"
     description: "A course to review the equations of motion, static and dynamic stability, response to control or inputs. Covers classical and modern control theory and application to autopilot design, with numerical solutions in flight dynamics and control."
-    image: "path/to/image.jpg"
+    image: "/assets/imgs/teaching/f22.webp"
