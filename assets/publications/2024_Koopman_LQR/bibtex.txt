@@ -1,6 +1,26 @@
-@article{manaa2024koopman,
-  title={Koopman-LQR Controller for Quadrotor UAVs from Data},
-  author={Manaa, Zeyad M and Abdallah, Ayman M and Abido, Mohammad A and Ali, Syed S Azhar},
-  journal={arXiv preprint arXiv:2406.17973},
-  year={2024}
+@INPROCEEDINGS{Mana2409:Koopman,
+AUTHOR="Zeyad Mahmoud Manaa and Ayman Abdallah and Mohammad A. Abido and Syed Saad
+Azhar Ali",
+TITLE="{Koopman-LQR} Controller for Quadrotor {UAVs} From Data",
+BOOKTITLE="2024 IEEE International Conference on Smart Mobility (SM) (SM'2024)",
+ADDRESS="Niagara Falls, Canada",
+PAGES=20,
+DAYS=16,
+MONTH=sep,
+YEAR=2024,
+ABSTRACT="Quadrotor systems are common and beneficial for many fields, but their
+intricate behavior often makes it challenging to design effective and
+optimal control strategies. Some traditional approaches to nonlinear
+control often rely on local linearizations or complex nonlinear models,
+which can be inaccurate or computationally expensive. We present a
+data-driven approach to identify the dynamics of a given quadrotor system
+using Koopman operator theory. Koopman theory offers a framework for
+representing nonlinear dynamics as linear operators acting on observable
+functions of the state space. This allows to approximate nonlinear systems
+with globally linear models in a higher dimensional space, which can be
+analyzed and controlled using standard linear optimal control techniques.
+We leverage the method of extended dynamic mode decomposition (EDMD) to
+identify Koopman operator from data with total least squares. We
+demonstrate that the identified model can be stabilized and controllable by
+designing a controller using linear quadratic regulator (LQR)."
 }
