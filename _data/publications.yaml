@@ -17,7 +17,7 @@ papers:
   - title: "Koopman-LQR Controller for Quadrotor UAVs from Data"
     image: "/assets/publications/2024_Koopman_LQR/figure1.jpeg"
     authors: "<b>Zeyad M. Manaa</b>, Ayman M. Abdallah, Mohammad A. Abido, Syed Saad A. Ali"
-    venue: "Preprint, accepted at IEEE SM'24"
+    venue: "IEEE SM'24"
     paper_pdf: "https://arxiv.org/pdf/2406.17973"
     poster: "/assets/publications/2024_Koopman_LQR/poster.pdf"
     bibtex: "/assets/publications/2024_Koopman_LQR/bibtex.txt"
