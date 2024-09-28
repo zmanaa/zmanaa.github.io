@@ -3,7 +3,7 @@ papers:
     image: "/assets/publications/2024_KINETC/image.png"
     authors: "<b>Zeyad M. Manaa</b>, Ayman M. Abdallah, Sami El-Ferik"
     venue: "Preprint"
-    #paper_pdf: "/assets/publications/2024_KINETC/KINETC__Koopman_Inspired_Nonlinear_Event_Triggered_Control_from_Data.pdf"
+    paper_pdf: "/assets/publications/2024_KINETC/KINETC__Koopman_Inspired_Nonlinear_Event_Triggered_Control_from_Data.pdf"
     bibtex: "/assets/publications/2024_KINETC/bibtex.txt"
     selected: y
 
