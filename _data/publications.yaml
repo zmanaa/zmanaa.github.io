@@ -11,7 +11,7 @@ papers:
     image: "/assets/publications/2024_Airfoil/fig.png"
     authors: "<b>Zeyad M. Manaa</b>, Naef A.A. Qasem"
     venue: "International Journal of Numerical Methods for Heat & Fluid Flow"
-    paper_pdf: "https://www.emerald.com/insight/content/doi/10.1108/HFF-06-2024-0433/full/html"
+    paper_pdf: "https://www.emerald.com/insight/content/doi/10.1108/HFF-06-2024-0433/full/pdf?casa_token=DIjDvVRJoSwAAAAA:wZeEgTtNlixtY7EeS71Ty_Z5OXBZjSBVrLtM4bHTeAyJXiTk3OZp-4oDR-BvyXRF-vStbEyHcR5B0HIloh7p_LKX1JgkivgzI3qDnG6_k03ZcuAbObrHfQ"
     bibtex: "/assets/publications/2024_Airfoil/bibtex.txt"
     selected: y
 
