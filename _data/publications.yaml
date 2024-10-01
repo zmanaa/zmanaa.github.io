@@ -37,7 +37,7 @@ papers:
     image: "/assets/publications/2025_Slung/alpha_r.png"
     authors: "Mohssen E. Elshaar, Pansie A. khodary, Meral L. Badr, Mohamad A. Sayegh, <b>Zeyad M. Manaa</b>, Ayman M. Abdallah"
     venue: "Preprint, accepted at AIAA SCITECH 2025"
-    paper_pdf: "assets/publications/2025_Slung/view.pdf"
+    paper_pdf: "https://arxiv.org/pdf/2409.18741"
     bibtex: "/assets/publications/2025_Slung/bibtex.txt"
     selected: y
 
