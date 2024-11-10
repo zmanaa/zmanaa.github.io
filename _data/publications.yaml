@@ -1,5 +1,5 @@
 papers:
-  - title: "KOETC: Koopman Operator-Based Event-Triggered Control from Data"
+  - title: '<a href="https://zmanaa.github.io/koetc/">KOETC: Koopman Operator-Based Event-Triggered Control from Data</a>'
     image: "/assets/publications/2024_KOETC/image.png"
     authors: "<b>Zeyad M. Manaa</b>, Ayman M. Abdallah, Mohamed Ismail, Sami El-Ferik"
     venue: "submitted to Results in Engineering"
