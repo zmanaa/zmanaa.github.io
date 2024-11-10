@@ -1,0 +1,7 @@
+@article{manaa2024koetc,
+  author    = {Manaa, Zeyad M. and Abdallah, Ayman M. and Ismail, Mohamed and El-Ferik, Sami},
+  title     = {{KOETC: Koopman Operator-Based Event-Triggered Control from Data}},
+  journal   = {Submitted to Results in Engineering},
+  year      = {2024},
+  note      = {Available at: \url{https://zmanaa.github.io/koetc/}},
+}

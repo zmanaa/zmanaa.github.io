@@ -1,6 +1,0 @@
-@article{manaa2024kinetc,
-  title={KINETC: Koopman-Inspired Nonlinear Event-Triggered Control from Data},
-  author={Manaa, Zeyad M and Abdallah, Ayman M and El-Ferik Sami},
-  journal={},
-  year={2024}
-}

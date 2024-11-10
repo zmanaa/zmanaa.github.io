@@ -4,7 +4,11 @@ papers:
     authors: "<b>Zeyad M. Manaa</b>, Ayman M. Abdallah, Mohamed Ismail, Sami El-Ferik"
     venue: "submitted to Results in Engineering"
     paper_pdf: "/assets/publications/2024_KOETC/koetc.pdf"
+<<<<<<< HEAD
     bibtex: "/assets/publications/2024_KINETC/bibtex.txt"
+=======
+    bibtex: "/assets/publications/2024_KOETC/bibtex.txt"
+>>>>>>> ec7859e (add koetc)
     selected: y
 
   - title: "Novel airfoil for improved supersonic aerodynamic performance"
