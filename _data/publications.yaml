@@ -3,7 +3,7 @@ papers:
     image: "/assets/publications/2024_KOETC/image.png"
     authors: "<b>Zeyad M. Manaa</b>, Ayman M. Abdallah, Mohamed Ismail, Sami El-Ferik"
     venue: "submitted to Results in Engineering"
-    paper_pdf: "/assets/publications/2024_KOETC/koetc.pdf"
+    #    paper_pdf: "/assets/publications/2024_KOETC/koetc.pdf"
     bibtex: "/assets/publications/2024_KOETC/bibtex.txt"
     selected: y
 
