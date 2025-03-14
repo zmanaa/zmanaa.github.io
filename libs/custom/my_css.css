@@ -193,3 +193,13 @@ h4 {
   .popover-item:first-child .popover-link:hover:after {
     border-bottom-color: #33C3F0; }
 }
+
+/* Add this to libs/custom/my_css.css */
+a {
+  color: #c72025; /* Set hyperlink color */
+  text-decoration: none; /* Optional: remove underline */
+}
+
+a:hover {
+  text-decoration: underline; /* Optional: underline on hover */
+}
