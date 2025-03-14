@@ -1,31 +1,15 @@
-# Zeyad Manaa's Website (Last Update Sep 12, 2024)
+# Welcome to Zeyad Manaa's Personal Website (Last Updated: Sep 12, 2024)
+## About Me
+I am an incoming doctoral researcher in the Mechanical Engineering Department at TU/e, focusing on secure estimation and control
 
-## Updates guide
-Change one of the files in `_data`, unless you are changing the look of the website.
+## Research Interests
+- Data-driven modeling and control of dynamical systems
+- Control theory and optimization
+- Model reduction and feedback control
 
-Test changes with:
-```
-jekyll serve
-```
+## News
+- **[May 5, 2025]** I will be joining TU/e as a PhD researcher!
 
-Push to the ML web directory:
-```
-rm -rf public_html
-mkdir public_html
-```
-```
-./__deploy.sh
-```
-
-More info on the [Media Lab wiki](http://wiki.media.mit.edu/view/Necsys/WebPagePersonal).
-
-
-## External Libraries
-- Framework: [Jekyll](http://jekyllrb.com/)
-- CSS
-  - [Skeleton](getskeleton.com)
-  - Tabs: [Skeleton Tabs](https://github.com/nathancahill/skeleton-tabs)
-  - Experience: [Timeline](https://codepen.io/NilsWe/pen/FemfK)
-  - Icons: [Font Awesome](http://fontawesome.io/)
-- JS
-  - [Jquery (3.1.1)](https://jquery.com/)
+## Contact
+- Email: [zeyad.manaa@example.com](mailto:zmmanaa@gmail.com)
+- GitHub: [zeyad-manaa](https://github.com/zmanaa)
