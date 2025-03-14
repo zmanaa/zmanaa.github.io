@@ -162,7 +162,7 @@ a {
   text-decoration: none;
   font-weight: bold; }
 a:hover {
-  color: white;
+  color: #c72025;
   transition: 0.2s ease-in-out;
   background: cornsilk;
   border-radius: 4px;
