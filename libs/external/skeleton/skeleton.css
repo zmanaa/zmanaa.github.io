@@ -162,9 +162,9 @@ a {
   text-decoration: none;
   font-weight: bold; }
 a:hover {
-  color: #c72025;
+  color: white; /* Changed hover color to #c72025 */
   transition: 0.2s ease-in-out;
-  background: cornsilk;
+  background: #e59714;
   border-radius: 4px;
   padding: 0 3px; }
 
