@@ -11,5 +11,5 @@ I am an incoming doctoral researcher in the Mechanical Engineering Department at
 - **[May 5, 2025]** I will be joining TU/e as a PhD researcher!
 
 ## Contact
-- Email: [zeyad.manaa@example.com](mailto:zmmanaa@gmail.com)
-- GitHub: [zeyad-manaa](https://github.com/zmanaa)
+- Email: [zmmanaa@gmail.com](mailto:zmmanaa@gmail.com)
+- GitHub: [zmanaa](https://github.com/zmanaa)
