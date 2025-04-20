@@ -87,9 +87,11 @@ layout: default
 <div class="docs-section" id="blog">
   <h4>Blog Posts</h4>
   <ul>
+    {% for post in site.posts limit:1 %}
     <li>
-      <b>[March 20, 2024]</b> <a href="/2024/03/20/narrative-identity.html" target="_self">الهوية السردية وحكايات الذات</a>
+      <b>[{{ post.date | date: "%B %d, %Y" }}]</b> <a href="{{ post.url }}" target="_self">{{ post.title }}</a>
     </li>
+    {% endfor %}
   </ul>
 </div>
 
