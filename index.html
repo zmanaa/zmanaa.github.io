@@ -83,24 +83,32 @@ layout: default
     </ul>
 </div>
 
-<!-- ========== Blog Posts ========== -->
+<!-- ========== Blog Posts ==========
 <div class="docs-section" id="blog">
   <h4>Blog Posts</h4>
   <ul>
     {% for post in site.posts %}
     <li>
-      <b>[{{ post.date | date: "%B %d, %Y" }}]</b> <a href="{{ post.url | relative_url }}" target="_self">{{ post.title }}</a>
+      <b>[{{ post.date | date: "%B %d, %Y" }}]</b> 
+      {% if post.url %}
+        <a href="{{ post.url | relative_url }}" target="_self">{{ post.title }}</a>
+      {% else %}
+        {{ post.title }}
+      {% endif %}
       {% if post.lang == 'ar' %}
         <span style="color: #c72025;">[Arabic]</span>
       {% endif %}
     </li>
     {% endfor %}
     <li>
-      <b>[March 20, 2024]</b> <a href="/posts/narrative_identity.md" target="_self">الهوية السردية وحكايات الذات</a>
+      <b>[March 20, 2024]</b> 
+      {% if "/posts/narrative_identity.md" %}
+        <a href="/posts/narrative_identity.md" target="_self">الهوية السردية وحكايات الذات</a>
+      {% endif %}
       <span style="color: #c72025;">[Arabic]</span>
     </li>
   </ul>
-</div>
+</div> -->
 
 <!-- ========== PUBLICATIONS ========== -->
 <div class="docs-section" id="publications">
