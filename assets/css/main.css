@@ -1,0 +1,21 @@
+/* RTL Support */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .post-content {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] ul, [dir="rtl"] ol {
+  padding-right: 2em;
+  padding-left: 0;
+}
+
+[dir="rtl"] blockquote {
+  border-right: 4px solid #ccc;
+  border-left: none;
+  padding-right: 1em;
+  padding-left: 0;
+} 
