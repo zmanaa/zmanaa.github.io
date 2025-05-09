@@ -49,6 +49,14 @@ layout: default
         I will be joining <a href="https://www.tue.nl/en/">TU/e</a> as a PhD researcher!
       </li>
       <li>
+        <b style="color: #c72025; font-weight: normal;">[May 01, 2025]</b>&nbsp&nbsp
+        Received the <b>Outstanding Graduate Student Award</b> for introducing a new research direction at the Aerospace Eng. Dept. and the <b>Interdisc. Res. Ctr. for Aviation & Space Expl.</b>! 🏆
+      </li>   
+      <li>
+        <b style="color: #c72025; font-weight: normal;">[Dec. 31, 2024]</b>&nbsp&nbsp
+        Successfully defended my Master’s thesis and was awarded the Master’s degree in Aerospace Engineering! 🎓
+      </li>   
+      <li>
         <b style="color: #c72025; font-weight: normal;">[Sep. 18, 2024]</b>&nbsp&nbsp
         I presented out paper <b>Koopman-LQR Controller for Quadrotor UAVs From Data</b> at OntarioTech University, Canada!
       </li>
@@ -83,32 +91,6 @@ layout: default
     </ul>
 </div>
 
-<!-- ========== Blog Posts ==========
-<div class="docs-section" id="blog">
-  <h4>Blog Posts</h4>
-  <ul>
-    {% for post in site.posts %}
-    <li>
-      <b>[{{ post.date | date: "%B %d, %Y" }}]</b> 
-      {% if post.url %}
-        <a href="{{ post.url | relative_url }}" target="_self">{{ post.title }}</a>
-      {% else %}
-        {{ post.title }}
-      {% endif %}
-      {% if post.lang == 'ar' %}
-        <span style="color: #c72025;">[Arabic]</span>
-      {% endif %}
-    </li>
-    {% endfor %}
-    <li>
-      <b>[March 20, 2024]</b> 
-      {% if "/posts/narrative_identity.md" %}
-        <a href="/posts/narrative_identity.md" target="_self">الهوية السردية وحكايات الذات</a>
-      {% endif %}
-      <span style="color: #c72025;">[Arabic]</span>
-    </li>
-  </ul>
-</div> -->
 
 <!-- ========== PUBLICATIONS ========== -->
 <div class="docs-section" id="publications">
@@ -149,10 +131,6 @@ layout: default
 
                 {% if paper.code %}
                   <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
-                {% endif %}
-
-                {% if paper.blog %}
-                <a class="button" href="{{ paper.blog }}" target="_blank">Blog</a>
                 {% endif %}
 
                 {% if paper.bibtex %}
