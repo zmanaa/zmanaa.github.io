@@ -1,4 +1,12 @@
 courses:
+  - title: "4DM80 - Fault Detection and Isolation for Control Systems"
+    type: "Graduate course, teaching assistant"
+    venue: "Eindhoven University of Technology, Mechanical Engineering"
+    date: "May, 2025"
+    location: "Eindhoven, Netherlands"
+    description: "A course on fault detection which focuses on modeling and dignosis of faults in control systems and mitigation techniques to isolate/estimate the fault."
+    image: "/assets/imgs/teaching/f22.webp"
+
   - title: "AE 426 - Introduction to Aircraft Flight Mechanics"
     type: "Undergraduate course, instructor"
     venue: "King Fahd University of Petroleum and Minerals, Aerospace Department"
