@@ -14,23 +14,23 @@
 }
 
 [data-theme="dark"] {
-  --text-dark: #f8fafc;
-  --text-medium: #cbd5e1;
-  --text-light: #94a3b8;
-  --bg-light: #1e293b;
-  --border-color: #334155;
-  background-color: #0f172a;
+  --text-dark: #abb2bf;
+  --text-medium: #818896;
+  --text-light: #5c6370;
+  --bg-light: #21252b;
+  --border-color: #3e4451;
+  background-color: #282c34;
   color: var(--text-medium);
 }
 
 [data-theme="dark"] body {
-  background-color: #0f172a;
+  background-color: #282c34;
 }
 
 [data-theme="dark"] .navbar,
 [data-theme="dark"] .navbar-spacer {
-  background: #1e293b;
-  border-color: #334155;
+  background: #21252b;
+  border-color: #3e4451;
 }
 
 [data-theme="dark"] .navbar-link {
@@ -38,30 +38,30 @@
 }
 
 [data-theme="dark"] .paper:hover {
-  background-color: #1e293b;
+  background-color: #21252b;
 }
 
 [data-theme="dark"] .footer {
-  border-color: #334155;
+  border-color: #3e4451;
   color: var(--text-light);
 }
 
 [data-theme="dark"] .popover {
-  background: #1e293b;
-  border-color: #334155;
+  background: #21252b;
+  border-color: #3e4451;
 }
 
 [data-theme="dark"] .popover-link {
   color: var(--text-dark);
-  border-color: #334155;
+  border-color: #3e4451;
 }
 
 [data-theme="dark"] .popover-item:first-child .popover-link:after {
-  border-bottom-color: #1e293b;
+  border-bottom-color: #21252b;
 }
 
 [data-theme="dark"] .popover-item:first-child .popover-link:before {
-  border-bottom-color: #334155;
+  border-bottom-color: #3e4451;
 }
 
 html {
@@ -634,8 +634,8 @@ a:hover {
 }
 
 [data-theme="dark"] .theme-toggle {
-  background-color: #1e293b;
-  border-color: #334155;
+  background-color: #21252b;
+  border-color: #3e4451;
   color: var(--text-dark);
 }
 
