@@ -154,8 +154,29 @@ $(document).ready(function () {
   }
 
 
-  init();
+  /* Blog Tag Filtering */
+  $(document).on('click', '.clickable-tag', function () {
+    var tag = $(this).text();
+    $('.post-item').hide();
+    $('.post-item').filter(function () {
+      var tags = $(this).data('tags').toString().split(',');
+      return tags.includes(tag);
+    }).fadeIn();
 
+    // Add info message and reset button if not already there
+    if ($('#filter-info').length === 0) {
+      $('#blog h4').after('<div id="filter-info" style="margin-bottom: 20px; font-weight: 600; color: var(--primary-color);">Showing posts tagged: <span id="active-tag"></span> <a href="#" id="reset-filter" style="margin-left: 10px; font-size: 0.8em; font-weight: 400; color: var(--text-light); text-decoration: underline;">(Clear Filter)</a></div>');
+    }
+    $('#active-tag').text(tag);
+  });
+
+  $(document).on('click', '#reset-filter', function (e) {
+    e.preventDefault();
+    $('.post-item').fadeIn();
+    $('#filter-info').remove();
+  });
+
+  init();
 });
 
 /* Gallery Modal Logic */

@@ -6,18 +6,19 @@ title: Blog
     <h4>Blog</h4>
     <ul class="posts-list" style="list-style: none; margin-left: 0;">
         {% for post in site.posts %}
-        <li style="margin-bottom: 2rem;">
+        <li class="post-item" data-tags="{{ post.tags | join: ',' }}" style="margin-bottom: 2rem;">
             <h5>
-                <a href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none; color: #333;">
+                <a href="{{ post.url | prepend: site.baseurl }}"
+                    style="text-decoration: none; color: var(--text-dark);">
                     {{ post.title }}
                 </a>
             </h5>
-            <span style="color: #999; font-size: 0.9em;">
+            <span style="color: var(--text-light); font-size: 0.9em;">
                 {{ post.date | date: "%B %d, %Y" }}
             </span>
-            <div class="post-tags">
+            <div class="post-tags" style="margin-top: 5px;">
                 {% for tag in post.tags %}
-                <span class="tag">{{ tag }}</span>
+                <span class="tag clickable-tag" style="cursor: pointer;">{{ tag }}</span>
                 {% endfor %}
             </div>
             <p>
