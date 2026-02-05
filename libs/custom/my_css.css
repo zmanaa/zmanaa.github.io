@@ -2,8 +2,8 @@
 :root {
   --primary-color: #c72025;
   --text-dark: #222;
-  --text-medium: #444;
-  --text-light: #666;
+  --text-medium: #b8b8b8;
+  --text-light: #dfdfdf;
   --bg-light: #fafafa;
   --border-color: #eee;
   --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -629,8 +629,8 @@ a:hover {
 
 .theme-toggle {
   cursor: pointer;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   line-height: 40px;
   text-align: center;
   border-radius: 50%;
