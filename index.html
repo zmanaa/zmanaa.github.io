@@ -109,9 +109,78 @@ layout: default
   </ul>
 </section>
 
+<!-- ========== Publications Preview ========== -->
+<section class="docs-section" id="publications-preview">
+  <h4>Selected Publications</h4>
+  {% assign selected_papers = site.data.publications.papers | where: "selected", "y" | limit: 2 %}
+  {% for paper in selected_papers %}
+  <div class="paper">
+    <div class="row">
+      <div class="four columns">
+        <div class="figure">
+          <img src="{{ paper.image }}" width="100%" style="border-radius: 8px;">
+        </div>
+      </div>
+      <div class="eight columns">
+        <p class="title"><b>{{ paper.title }}</b></p>
+        <p>{{ paper.authors }}</p>
+        <p><i>{{ paper.venue }}</i></p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  <div style="text-align: right; margin-top: 1rem;">
+    <a href="{{ '/publications.html' | prepend: site.baseurl }}" class="button">View All Publications &rarr;</a>
+  </div>
+</section>
 
+<!-- ========== Teaching Preview ========== -->
+<section class="docs-section" id="teaching-preview">
+  <h4>Recent Teaching</h4>
+  {% assign teaching_courses = site.data.teaching.courses | limit: 1 %}
+  {% for course in teaching_courses %}
+  <div class="paper">
+    <div class="row">
+      <div class="four columns">
+        <div class="figure">
+          {% if course.image %}
+          <img src="{{ course.image }}" width="100%" style="border-radius: 8px;">
+          {% endif %}
+        </div>
+      </div>
+      <div class="eight columns">
+        <p class="title"><b>{{ course.title }}</b></p>
+        <p><i>{{ course.type }}</i></p>
+        <p>{{ course.venue }} | {{ course.date }}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  <div style="text-align: right; margin-top: 1rem;">
+    <a href="{{ '/teaching.html' | prepend: site.baseurl }}" class="button">View All Teaching &rarr;</a>
+  </div>
+</section>
 
-
+<!-- ========== Blog Preview ========== -->
+<section class="docs-section" id="blog-preview">
+  <h4>Latest from Blog</h4>
+  <ul style="list-style: none; margin-left: 0;">
+    {% for post in site.posts limit:2 %}
+    <li style="margin-bottom: 2rem;">
+      <h5 style="margin-bottom: 0.5rem;">
+        <a href="{{ post.url | prepend: site.baseurl }}" style="text-decoration: none;">
+          {{ post.title }}
+        </a>
+      </h5>
+      <span style="color: #999; font-size: 0.9em;">{{ post.date | date: "%B %d, %Y" }}</span>
+      <p style="margin-top: 0.5rem;">{{ post.excerpt | strip_html | truncate: 150 }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+  <div style="text-align: right; margin-top: 1rem;">
+    <a href="{{ '/blog.html' | prepend: site.baseurl }}" class="button">Read More Posts &rarr;</a>
+  </div>
+</section>
 
 
 <!-- ========== RESUME ========== -->

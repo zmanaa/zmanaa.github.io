@@ -6,11 +6,26 @@ layout: default
   <p style="color: #999; font-size: 0.9em;">
     {{ page.date | date: "%B %d, %Y" }}
   </p>
-  
+
+  <div class="post-tags">
+    {% for tag in page.tags %}
+    <span class="tag">{{ tag }}</span>
+    {% endfor %}
+  </div>
+
   <div class="post-content">
     {{ content }}
   </div>
+  <div class="share-buttons" style="margin: 30px 0;">
+    <p style="font-weight: 600; margin-bottom: 10px;">Share this post:</p>
+    <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ site.url }}{{ site.baseurl }}{{ page.url }}"
+      target="_blank" class="button"><i class="fa fa-twitter"></i> Twitter</a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ site.baseurl }}{{ page.url }}&title={{ page.title | url_encode }}"
+      target="_blank" class="button"><i class="fa fa-linkedin"></i> LinkedIn</a>
+    <a href="mailto:?subject={{ page.title | url_encode }}&body=Check out this post: {{ site.url }}{{ site.baseurl }}{{ page.url }}"
+      class="button"><i class="fa fa-envelope"></i> Email</a>
+  </div>
 
   <hr>
-  <a href="{{ "/blog.html" | prepend: site.baseurl }}">Back to Blog</a>
+  <a href="{{ " /blog.html" | prepend: site.baseurl }}">Back to Blog</a>
 </div>

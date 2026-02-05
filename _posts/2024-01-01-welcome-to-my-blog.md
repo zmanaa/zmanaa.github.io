@@ -2,6 +2,7 @@
 layout: post
 title: Welcome to my Blog
 date: 2024-01-01
+tags: [Personal, Project]
 ---
 
 Hello! This is a sample blog post to test the new blog functionality on my website.
