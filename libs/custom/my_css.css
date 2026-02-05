@@ -13,6 +13,22 @@
   --border-dark: #333;
 }
 
+::selection {
+  background: rgba(199, 32, 37, 0.1);
+}
+
+::-moz-selection {
+  background: rgba(199, 32, 37, 0.1);
+}
+
+[data-theme="dark"] ::selection {
+  background: rgba(171, 178, 191, 0.2);
+}
+
+[data-theme="dark"] ::-moz-selection {
+  background: rgba(171, 178, 191, 0.2);
+}
+
 [data-theme="dark"] {
   --text-dark: #abb2bf;
   --text-medium: #818896;
@@ -104,9 +120,11 @@ h3 {
 h4 {
   font-size: 2.2rem;
   font-weight: 600;
-  letter-spacing: .05rem;
-  margin-bottom: 1.2rem;
+  letter-spacing: .1rem;
+  margin-bottom: 2.5rem;
   color: var(--text-dark);
+  text-align: center;
+  text-transform: uppercase;
 }
 
 h5 {
