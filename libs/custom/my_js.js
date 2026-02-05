@@ -92,3 +92,78 @@ $(document).ready(function() {
   init();
 
 });
+
+/* Gallery Modal Logic */
+$(document).ready(function() {
+    // Global variables for gallery
+    let currentIndex = 0;
+    let images = []; 
+
+    // Initialize images
+    images = document.querySelectorAll('.gallery-image');
+
+    // Functions
+    function openModal(element) {
+        const modal = document.getElementById("modal");
+        const modalImage = document.getElementById("modal-image");
+        if(modal && modalImage) {
+            modal.style.display = "block";
+            modalImage.src = element.src;
+            // Update reference in case DOM changed
+            images = document.querySelectorAll('.gallery-image');
+            currentIndex = Array.from(images).indexOf(element);
+        }
+    }
+
+    function closeModal() {
+        const modal = document.getElementById("modal");
+        if (modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    function changeImage(n) {
+        currentIndex += n;
+        if (currentIndex >= images.length) currentIndex = 0;
+        if (currentIndex < 0) currentIndex = images.length - 1;
+        const modalImage = document.getElementById("modal-image");
+        if (modalImage && images.length > 0) {
+            modalImage.src = images[currentIndex].src;
+        }
+    }
+
+    // Bind click events for gallery images
+    // Using delegation for robustness
+    $('body').on('click', '.gallery-image', function() {
+        openModal(this);
+    });
+
+    // Close modal on click
+    $('body').on('click', '#modal .close', function() {
+        closeModal();
+    });
+    
+    // Close modal when clicking outside content
+    $('body').on('click', '#modal', function(e) {
+        if (e.target === this) {
+            closeModal();
+        }
+    });
+
+    // Navigation buttons
+    $('body').on('click', '.prev', function() { changeImage(-1); });
+    $('body').on('click', '.next', function() { changeImage(1); });
+
+    // Keyboard navigation
+    $(window).keydown(function(event) {
+        if (document.getElementById("modal") && document.getElementById("modal").style.display === "block") {
+             if (event.key === "ArrowRight") {
+               changeImage(1);
+             } else if (event.key === "ArrowLeft") {
+               changeImage(-1);
+             } else if (event.key === "Escape") {
+               closeModal();
+             }
+        }
+    });
+});

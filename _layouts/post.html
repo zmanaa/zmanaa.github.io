@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<div class="docs-section">
+  <h4>{{ page.title }}</h4>
+  <p style="color: #999; font-size: 0.9em;">
+    {{ page.date | date: "%B %d, %Y" }}
+  </p>
+  
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <hr>
+  <a href="{{ "/blog.html" | prepend: site.baseurl }}">Back to Blog</a>
+</div>
