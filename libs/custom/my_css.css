@@ -600,3 +600,45 @@ a:hover {
   background-color: #333;
   color: var(--text-dark);
 }
+
+/* ================ Theme Toggle ================ */
+.theme-toggle-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+}
+
+.theme-toggle {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: var(--bg-light);
+  border: 1px solid var(--border-color);
+  font-size: 1.8rem;
+  transition: all 0.3s ease;
+  color: var(--text-medium);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  color: var(--primary-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+[data-theme="dark"] .theme-toggle {
+  background-color: var(--bg-dark);
+  border-color: var(--border-dark);
+  color: var(--text-dark);
+}
+
+.main-description {
+  position: relative;
+}

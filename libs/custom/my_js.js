@@ -33,7 +33,8 @@ $(document).ready(function () {
     document.documentElement.setAttribute('data-theme', savedTheme);
     updateThemeIcon(savedTheme);
 
-    $('#theme-toggle').on('click', function () {
+    // Use event delegation on document to handle potential dynamic movement or late loading
+    $(document).on('click', '#theme-toggle', function () {
       var currentTheme = document.documentElement.getAttribute('data-theme');
       var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       document.documentElement.setAttribute('data-theme', newTheme);
