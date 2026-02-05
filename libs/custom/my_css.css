@@ -2,8 +2,8 @@
 :root {
   --primary-color: #c72025;
   --text-dark: #222;
-  --text-medium: #b8b8b8;
-  --text-light: #dfdfdf;
+  --text-medium: #444;
+  --text-light: #666;
   --bg-light: #fafafa;
   --border-color: #eee;
   --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -156,9 +156,14 @@ p {
 }
 
 .main-description .fa {
-  color: #646464;
+  color: var(--text-light);
   font-size: 22px;
   margin-top: 5px;
+  transition: color 0.3s ease;
+}
+
+.main-description span:hover .fa {
+  color: var(--primary-color);
 }
 
 /* ================ Paper/Card Styling ================ */
@@ -251,6 +256,7 @@ a {
 a:hover {
   color: #a51a1e;
   text-decoration: underline;
+  background-color: transparent !important;
 }
 
 /* ================ Navbar Improvements ================ */
