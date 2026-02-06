@@ -25,31 +25,9 @@ $(document).ready(function () {
     $('a[href^="#"]').on('click', smoothScroll)
     buildSnippets();
     setActiveNav();
-    initTheme();
-  }
-
-  function initTheme() {
-    var savedTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    updateThemeIcon(savedTheme);
-
-    // Use event delegation on document to handle potential dynamic movement or late loading
-    $(document).on('click', '#theme-toggle', function () {
-      var currentTheme = document.documentElement.getAttribute('data-theme');
-      var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-      updateThemeIcon(newTheme);
-    });
-  }
-
-  function updateThemeIcon(theme) {
-    var icon = $('#theme-toggle i');
-    if (theme === 'dark') {
-      icon.removeClass('fa-moon-o').addClass('fa-sun-o');
-    } else {
-      icon.removeClass('fa-sun-o').addClass('fa-moon-o');
-    }
+    // Default to light theme and clear any saved preference
+    document.documentElement.setAttribute('data-theme', 'light');
+    localStorage.removeItem('theme');
   }
 
   function setActiveNav() {
