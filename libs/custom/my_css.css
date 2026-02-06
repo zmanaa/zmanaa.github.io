@@ -251,6 +251,8 @@ a {
 a:hover {
   color: #a51a1e;
   text-decoration: underline;
+  background-color: transparent !important;
+  background: transparent !important;
 }
 
 /* ================ Navbar Improvements ================ */
