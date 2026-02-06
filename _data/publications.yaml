@@ -5,7 +5,7 @@ papers:
     venue: "submitted to Results in Engineering"
     paper_pdf: "/assets/publications/2024_KOETC/koetc.pdf"
     bibtex: "/assets/publications/2024_KOETC/bibtex.txt"
-    selected: y
+    selected: n
 
   - title: "Novel airfoil for improved supersonic aerodynamic performance"
     image: "/assets/publications/2024_Airfoil/fig.png"
@@ -39,7 +39,7 @@ papers:
     venue: "AIAA SCITECH 2025"
     paper_pdf: "https://arxiv.org/pdf/2409.18741"
     bibtex: "/assets/publications/2025_Slung/bibtex.txt"
-    selected: y
+    selected: n
 
     #  - title: "  Dynamic Stability Performance Analysis of The BWB Skywalker X-8"
     #    image: "/assets/publications/2025_Sky/image.png"
