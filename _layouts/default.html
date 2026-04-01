@@ -23,6 +23,9 @@
   <link rel="stylesheet" href={{ "/libs/external/skeleton/normalize.css" | prepend: site.baseurl }}>
   <link rel="stylesheet" href={{ "/libs/external/skeleton/skeleton.css" | prepend: site.baseurl }}>
   <link rel="stylesheet" href={{ "/libs/custom/my_css.css" | prepend: site.baseurl }}>
+  {% if page.url == "/" or page.url == "/index.html" %}
+  <link rel="stylesheet" href={{ "/assets/css/editorial.css" | prepend: site.baseurl }}>
+  {% endif %}
 
   <!-- JQuery
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -58,12 +61,13 @@
 
 </head>
 
-<body>
+<body class="{% if page.url == '/' or page.url == '/index.html' %}editorial-page{% endif %}">
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
 
+    {% if page.url != "/" and page.url != "/index.html" %}
     <section class="header">
       <div class="row">
         <div class="three columns">
@@ -100,6 +104,7 @@
         </div>
       </div>
     </section>
+    {% endif %}
 
     <div class="navbar-spacer"></div>
     <nav class="navbar">

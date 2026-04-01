@@ -1,0 +1,135 @@
+/* Editorial-Minimal Portfolio Style */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --editorial-bg: #f3f3f1;
+  --editorial-text: #222222;
+  --editorial-muted: #8c8c8c;
+  --editorial-serif: 'Playfair Display', serif;
+  --editorial-sans: 'Inter', sans-serif;
+}
+
+.editorial-page {
+  background-color: var(--editorial-bg) !important;
+  color: var(--editorial-text) !important;
+  font-family: var(--editorial-sans) !important;
+}
+
+.hero-editorial {
+  padding: 4rem 4rem 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-identity {
+  max-width: 400px;
+  margin-bottom: 4rem;
+}
+
+.hero-identity .role-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  color: var(--editorial-muted);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.hero-identity .name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.hero-identity .affiliation {
+  font-size: 0.85rem;
+  color: var(--editorial-muted);
+}
+
+.hero-intro {
+  max-width: 800px;
+  z-index: 2;
+}
+
+.hero-intro h1 {
+  font-family: var(--editorial-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 2.5rem;
+  color: var(--editorial-text);
+  text-align: left !important;
+  text-transform: none !important;
+  border-bottom: none !important;
+}
+
+.hero-intro p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--editorial-text);
+  margin-bottom: 2rem;
+}
+
+.hero-intro strong {
+  font-weight: 600;
+}
+
+/* Sidebar/Nav adjustments for editorial style */
+.editorial-page .navbar {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+  margin-bottom: 4rem !important;
+}
+
+.editorial-page .navbar-link {
+  font-family: var(--editorial-sans);
+  font-weight: 500;
+  color: var(--editorial-muted) !important;
+}
+
+.editorial-page .navbar-link:hover,
+.editorial-page .navbar-link.active {
+  color: var(--editorial-text) !important;
+}
+
+/* Section styling for editorial feel */
+.editorial-page .docs-section {
+  border-top: 1px solid rgba(0,0,0,0.05);
+  padding: 6rem 0;
+}
+
+.editorial-page h4 {
+  font-family: var(--editorial-serif);
+  font-style: italic;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 2.4rem;
+  color: var(--editorial-text);
+  margin-bottom: 4rem;
+  text-align: left !important;
+}
+
+.editorial-page .paper {
+  background: transparent !important;
+  border: none !important;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.editorial-page .paper:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .hero-editorial {
+    padding: 2rem;
+  }
+  .hero-intro h1 {
+    font-size: 2.5rem;
+  }
+}
