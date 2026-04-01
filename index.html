@@ -176,28 +176,33 @@ layout: default
 </section>
 
 
-<!-- ========== RESUME ========== -->
-<section class="docs-section" id="resume">
-  <h4>Vitæ</h4>
+<!-- ========== VITAE ========== -->
+<div class="docs-section" id="vitae">
+  <h4>Vitae</h4>
 
-  <!-- The Timeline -->
-  <ul class="timeline">
-    {% for exp in site.data.experience.experiences %}
-    <li>
-      {% if exp.category == "work" %}
-      <div class="direction-l">
+  <div class="experience-list">
+    {% for experience in site.data.experience.experiences %}
+    <div class="experience-item">
+      <div class="logo-col">
+        {% if experience.logo %}
+        <img src="{{ experience.logo | prepend: site.baseurl }}" alt="{{ experience.place }}">
         {% else %}
-        <div class="direction-r">
-          {% endif %}
-          <div class="flag-wrapper">
-            <span class="flag">{{ exp.place }}</span>
-            <span class="time-wrapper"><span class="time">{{ exp.time }}</span></span>
-          </div>
-          <div class="desc"><b>{{ exp.title }}</b> <br /> {{ exp.subtitle }}</div>
+        <!-- Fallback or generic icon could go here -->
+        <div style="width: 78px; height: 78px; border-radius: 8px; background: #f0f0f0;"></div>
+        {% endif %}
+      </div>
+      <div class="content-col">
+        <div class="title-line">
+          {{ experience.title }} at <span class="company">{{ experience.place }}</span>
         </div>
-    </li>
+        <div class="meta-line">
+          <span class="location">{{ experience.subtitle | strip_html }}</span>
+          <span class="dates">{{ experience.time }}</span>
+        </div>
+      </div>
+    </div>
     {% endfor %}
-  </ul>
-</section>
+  </div>
+</div>
 
 </div>

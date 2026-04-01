@@ -150,3 +150,82 @@
     font-size: 2.5rem;
   }
 }
+
+/* Experience List (Vitae) - LinkedIn-inspired */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  max-width: 1120px;
+  margin-top: 2rem;
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: 78px 1fr;
+  column-gap: 22px;
+  align-items: flex-start;
+  min-height: 78px;
+}
+
+.experience-item img {
+  width: 78px;
+  height: 78px;
+  border-radius: 8px;
+  object-fit: contain;
+  display: block;
+}
+
+.experience-item .content-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.experience-item .title-line {
+  font-family: "Inter", "SF Pro Display", -apple-system, sans-serif;
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #1f1f1f;
+  margin-bottom: 4px;
+}
+
+.experience-item .title-line .company {
+  font-weight: 700;
+  color: #151515;
+}
+
+.experience-item .meta-line {
+  font-family: "Inter", "SF Pro Text", -apple-system, sans-serif;
+  font-size: 23px;
+  line-height: 1.35;
+}
+
+.experience-item .meta-line .location {
+  font-weight: 400;
+  color: #1f1f1f;
+}
+
+.experience-item .meta-line .dates {
+  font-weight: 400;
+  color: #9b9b9b;
+  margin-left: 8px;
+}
+
+@media (max-width: 750px) {
+  .experience-item .title-line {
+    font-size: 20px;
+  }
+  .experience-item .meta-line {
+    font-size: 18px;
+  }
+  .experience-item {
+    grid-template-columns: 60px 1fr;
+    column-gap: 15px;
+  }
+  .experience-item img {
+    width: 60px;
+    height: 60px;
+  }
+}
