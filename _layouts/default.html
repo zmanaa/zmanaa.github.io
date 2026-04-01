@@ -71,7 +71,24 @@
           <div class="role-label">{{ site.data.main_info.title }}</div>
           <div class="name">{{ site.data.main_info.name }}</div>
           <img src="{{ site.data.main_info.profile_pic | prepend: site.baseurl }}" class="small-profile-pic" alt="{{ site.data.main_info.name }}">
-          <div class="affiliation">{{ site.data.main_info.dept }} at {{ site.data.main_info.office }}</div>
+          
+          <div class="identity-links">
+            <a href="{{ site.data.main_info.google_scholar }}" target="_blank" title="Google Scholar">
+              <i class="ai ai-google-scholar"></i>
+            </a>
+            <a href="{{ site.data.main_info.linkedin }}" target="_blank" title="LinkedIn">
+              <i class="fa fa-linkedin-square"></i>
+            </a>
+            <a href="{{ site.data.main_info.github }}" target="_blank" title="GitHub">
+              <i class="fa fa-github-square"></i>
+            </a>
+          </div>
+
+          <div class="identity-email">
+            <a href="mailto:z.manaa@tue.nl" style="color: inherit; text-decoration: none;">z.manaa@tue.nl</a>
+          </div>
+
+          <div class="affiliation">{{ site.data.main_info.dept }} at <b>TU/e</b></div>
         </div>
       </div>
     </section>

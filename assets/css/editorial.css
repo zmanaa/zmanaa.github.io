@@ -43,14 +43,39 @@
 }
 
 .hero-identity .small-profile-pic {
-  width: 90px;
-  height: 110px; /* Slightly taller for a rectangular feel */
-  border-radius: 12px; /* Soft rounded corners */
+  width: 100px;
+  height: 100px; /* Square shape */
+  border-radius: 12px;
   object-fit: cover;
   margin-bottom: 1rem;
   display: block;
   filter: grayscale(100%) contrast(1.1);
   transition: filter 0.3s ease;
+}
+
+.hero-identity .identity-links {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.hero-identity .identity-links a {
+  color: var(--editorial-text);
+  opacity: 0.6;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.hero-identity .identity-links a:hover {
+  opacity: 1;
+}
+
+.hero-identity .identity-email {
+  font-size: 0.9rem;
+  color: var(--editorial-muted);
+  margin-bottom: 1rem;
+  font-family: var(--editorial-sans);
 }
 
 .hero-identity .small-profile-pic:hover {
