@@ -23,9 +23,7 @@
   <link rel="stylesheet" href={{ "/libs/external/skeleton/normalize.css" | prepend: site.baseurl }}>
   <link rel="stylesheet" href={{ "/libs/external/skeleton/skeleton.css" | prepend: site.baseurl }}>
   <link rel="stylesheet" href={{ "/libs/custom/my_css.css" | prepend: site.baseurl }}>
-  {% if page.url == "/" or page.url == "/index.html" %}
   <link rel="stylesheet" href={{ "/assets/css/editorial.css" | prepend: site.baseurl }}>
-  {% endif %}
 
   <!-- JQuery
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -61,50 +59,22 @@
 
 </head>
 
-<body class="{% if page.url == '/' or page.url == '/index.html' %}editorial-page{% endif %}">
+<body class="editorial-page">
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
 
-    {% if page.url != "/" and page.url != "/index.html" %}
     <section class="header">
       <div class="row">
-        <div class="three columns">
-          <div><img class="u-max-full-width" style="border-radius: 0rem;"
-              src='{{ site.baseurl }}{{ site.data.main_info.profile_pic }}'></div>
-        </div>
-        <div class="nine columns main-description">
-          <h1>{{ site.data.main_info.name }}</h1>
-          <p>{{ site.data.main_info.title }}</p>
-          <p>{{ site.data.main_info.dept }}</p>
-          <p>{{ site.data.main_info.office }}</p>
-          <p>{{ site.data.main_info.email }}</p>
-          <p>
-
-            <span onclick="window.open('{{ site.data.main_info.google_scholar }}')" style="cursor: pointer">
-              <i class="ai fa ai-google-scholar-square" aria-hidden="true"></i>
-            </span>
-            <!--<span onclick="window.open('{{ site.data.main_info.semantic_scholar }}')" style="cursor: pointer">
-                <i class="ai fa ai-semantic-scholar-square" aria-hidden="true"></i>
-              </span>              
-
-              <span onclick="window.open('{{ site.data.main_info.twitter }}')" style="cursor: pointer">
-                <i class="fa fa-twitter-square" aria-hidden="true"></i>
-              </span>
-              -->
-
-            <span onclick="window.open('{{ site.data.main_info.github }}')" style="cursor: pointer">
-              <i class="fa fa-github-square" aria-hidden="true"></i>
-            </span>
-
-            <span onclick="window.open('{{ site.data.main_info.linkedin }}')" style="cursor: pointer">
-              <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-            </span>
+        <div class="hero-identity">
+          <div class="role-label">{{ site.data.main_info.title }}</div>
+          <div class="name">{{ site.data.main_info.name }}</div>
+          <img src="{{ site.data.main_info.profile_pic | prepend: site.baseurl }}" class="small-profile-pic" alt="{{ site.data.main_info.name }}">
+          <div class="affiliation">{{ site.data.main_info.dept }} at {{ site.data.main_info.office }}</div>
         </div>
       </div>
     </section>
-    {% endif %}
 
     <div class="navbar-spacer"></div>
     <nav class="navbar">

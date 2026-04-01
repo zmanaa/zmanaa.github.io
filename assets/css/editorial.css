@@ -17,7 +17,7 @@
 }
 
 .hero-editorial {
-  padding: 4rem 4rem 2rem 4rem;
+  padding: 4rem 0 2rem 0;
   display: flex;
   flex-direction: column;
 }
@@ -39,7 +39,22 @@
 .hero-identity .name {
   font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.hero-identity .small-profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  display: block;
+  filter: grayscale(100%) contrast(1.1); /* Subtle editorial feel */
+  transition: filter 0.3s ease;
+}
+
+.hero-identity .small-profile-pic:hover {
+  filter: grayscale(0%);
 }
 
 .hero-identity .affiliation {
@@ -112,14 +127,16 @@
   text-align: left !important;
 }
 
-.editorial-page .paper {
+.editorial-page .paper,
+.editorial-page .course {
   background: transparent !important;
   border: none !important;
   padding-left: 0;
   padding-right: 0;
 }
 
-.editorial-page .paper:hover {
+.editorial-page .paper:hover,
+.editorial-page .course:hover {
   transform: none;
   box-shadow: none;
 }
