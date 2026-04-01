@@ -43,13 +43,13 @@
 }
 
 .hero-identity .small-profile-pic {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+  width: 90px;
+  height: 110px; /* Slightly taller for a rectangular feel */
+  border-radius: 12px; /* Soft rounded corners */
   object-fit: cover;
   margin-bottom: 1rem;
   display: block;
-  filter: grayscale(100%) contrast(1.1); /* Subtle editorial feel */
+  filter: grayscale(100%) contrast(1.1);
   transition: filter 0.3s ease;
 }
 
@@ -81,7 +81,7 @@
 }
 
 .hero-intro p {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   line-height: 1.7;
   color: var(--editorial-text);
   margin-bottom: 2rem;
@@ -162,15 +162,15 @@
 
 .experience-item {
   display: grid;
-  grid-template-columns: 78px 1fr;
+  grid-template-columns: 56px 1fr; /* Reduced from 78px */
   column-gap: 22px;
   align-items: flex-start;
-  min-height: 78px;
+  min-height: 56px;
 }
 
 .experience-item img {
-  width: 78px;
-  height: 78px;
+  width: 56px;
+  height: 56px;
   border-radius: 8px;
   object-fit: contain;
   display: block;
@@ -179,12 +179,34 @@
 .experience-item .content-col {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+}
+
+/* Grouped Roles Styling */
+.experience-item .role-group {
+  margin-top: 1rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.experience-item .role-entry {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.experience-item .role-entry:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: -28px; /* Alignment with logo center roughly */
+  top: 24px;
+  bottom: -24px;
+  width: 2px;
+  background: #e0e0e0;
+  display: none; /* Keep it clean as per "no dividers" request, but can be enabled if requested */
 }
 
 .experience-item .title-line {
   font-family: "Inter", "SF Pro Display", -apple-system, sans-serif;
-  font-size: 26px;
+  font-size: 22px; /* Adjusted slightly for better harmony with smaller logos */
   line-height: 1.2;
   font-weight: 400;
   color: #1f1f1f;
@@ -198,7 +220,7 @@
 
 .experience-item .meta-line {
   font-family: "Inter", "SF Pro Text", -apple-system, sans-serif;
-  font-size: 23px;
+  font-size: 19px; /* Adjusted slightly */
   line-height: 1.35;
 }
 

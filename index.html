@@ -181,24 +181,42 @@ layout: default
   <h4>Vitae</h4>
 
   <div class="experience-list">
-    {% for experience in site.data.experience.experiences %}
+    {% assign grouped_exp = site.data.experience.experiences | group_by: "place" %}
+    {% for group in grouped_exp %}
+    {% assign first_item = group.items | first %}
     <div class="experience-item">
       <div class="logo-col">
-        {% if experience.logo %}
-        <img src="{{ experience.logo | prepend: site.baseurl }}" alt="{{ experience.place }}">
+        {% if first_item.logo %}
+        <img src="{{ first_item.logo | prepend: site.baseurl }}" alt="{{ group.name }}">
         {% else %}
-        <!-- Fallback or generic icon could go here -->
-        <div style="width: 78px; height: 78px; border-radius: 8px; background: #f0f0f0;"></div>
+        <div style="width: 56px; height: 56px; border-radius: 8px; background: #f0f0f0;"></div>
         {% endif %}
       </div>
       <div class="content-col">
+        {% if group.items.size > 1 %}
+        <!-- Multiple roles at one institution -->
+        <div class="title-line"><span class="company">{{ group.name }}</span></div>
+        <div class="role-group">
+          {% for item in group.items %}
+          <div class="role-entry">
+            <div class="title-line">{{ item.title }}</div>
+            <div class="meta-line">
+              <span class="location">{{ item.subtitle | strip_html }}</span>
+              <span class="dates">{{ item.time }}</span>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        {% else %}
+        <!-- Single role -->
         <div class="title-line">
-          {{ experience.title }} at <span class="company">{{ experience.place }}</span>
+          {{ first_item.title }} at <span class="company">{{ group.name }}</span>
         </div>
         <div class="meta-line">
-          <span class="location">{{ experience.subtitle | strip_html }}</span>
-          <span class="dates">{{ experience.time }}</span>
+          <span class="location">{{ first_item.subtitle | strip_html }}</span>
+          <span class="dates">{{ first_item.time }}</span>
         </div>
+        {% endif %}
       </div>
     </div>
     {% endfor %}
