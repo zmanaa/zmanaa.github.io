@@ -30,13 +30,13 @@
 
 #bowl {
   position: relative;
-  width: 280px; /* Scaled down slightly from 320px for vignette */
-  height: 280px;
+  width: 180px; /* Scaled down from 280px */
+  height: 180px;
   border-radius: 50%;
   background: radial-gradient(circle at 40% 38%, #F7F3E2 60%, #E8E3CC 100%);
-  border: 12px solid #E0DAC2;
+  border: 10px solid #E0DAC2;
   overflow: hidden;
-  box-shadow: 0 4px 20px var(--shelf-shadow);
+  box-shadow: 0 4px 15px var(--shelf-shadow);
 }
 
 #bowl::before {
@@ -56,33 +56,33 @@
 }
 
 #bowl-hour {
-  width: 9px;
-  height: 70px;
-  margin-left: -4.5px;
+  width: 6px;
+  height: 45px;
+  margin-left: -3px;
   background: #5A5A68;
   opacity: 0.75;
-  filter: blur(3px);
+  filter: blur(2px);
   z-index: 2;
 }
 
 #bowl-minute {
-  width: 6px;
-  height: 100px;
-  margin-left: -3px;
+  width: 4px;
+  height: 65px;
+  margin-left: -2px;
   background: #5A5A68;
   opacity: 0.68;
-  filter: blur(2px);
+  filter: blur(1.5px);
   z-index: 1;
 }
 
 #bowl-dot {
   position: absolute;
-  width: 16px;
-  height: 16px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: #C0506A;
   opacity: 0.9;
-  filter: blur(1.5px);
+  filter: blur(1px);
   transform: translate(-50%, -50%);
   z-index: 4;
 }
@@ -92,8 +92,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 5px;
-  height: 5px;
+  width: 4px;
+  height: 4px;
   border-radius: 50%;
   background: #6B6B7A;
   opacity: 0.55;
@@ -158,16 +158,17 @@
 }
 
 /* Specific item adjustments for wooden shelf */
-.vignette-item[data-id="frame"] { width: 45px; top: -15px; left: 12%; }
-.vignette-item[data-id="lamp"] { width: 70px; top: 75px; left: 18%; }
-.vignette-item[data-id="books"] { display: flex; gap: 2px; top: 110px; left: 50%; transform: translateX(-50%); width: auto; }
-.vignette-item[data-id="books"] img { width: 35px; height: 90px; object-fit: cover; border-radius: 2px; }
-.vignette-item[data-id="plant"] { width: 70px; top: 110px; right: 18%; }
+.vignette-item[data-id="frame"] { width: 55px; top: 125px; left: 13%; }
+.vignette-item[data-id="lamp"] { width: 85px; top: 220px; left: 15%; }
+.vignette-item[data-id="books"] { display: flex; gap: 2px; top: 155px; left: 50%; transform: translateX(-50%); width: auto; height: 110px; align-items: flex-end; }
+.vignette-item[data-id="books"] img { width: auto; height: 100%; width: 45px; object-fit: cover; border-radius: 2px; border-left: 2px solid rgba(0,0,0,0.1); }
+.vignette-item[data-id="plant"] { width: 90px; top: 155px; right: 15%; }
+.vignette-item[data-id="plant"] img { mix-blend-mode: multiply; }
 
-.vignette-item[data-id="gramophone"] { width: 140px; top: 260px; left: 50%; transform: translateX(-50%); }
+.vignette-item[data-id="gramophone"] { width: 180px; top: 310px; left: 50%; transform: translateX(-50%); }
 
-.vignette-item[data-id="films"] { display: flex; gap: 2px; top: 480px; left: 50%; transform: translateX(-50%); width: auto; }
-.vignette-item[data-id="film"] { width: 35px; height: 90px; object-fit: cover; border-radius: 2px; }
+.vignette-item[data-id="films"] { display: flex; gap: 6px; top: 510px; left: 50%; transform: translateX(-50%); width: auto; height: 110px; align-items: flex-end; }
+.vignette-item[data-id="films"] img { width: 80px; height: 110px; object-fit: cover; border-radius: 4px; box-shadow: 2px 4px 8px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.2); }
 
 /* Responsive Adjustments */
 @media (max-width: 800px) {
