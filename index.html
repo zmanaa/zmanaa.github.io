@@ -84,7 +84,7 @@ layout: default
       },
       gramophone: {
         id: "gramophone",
-        src: "assets/imgs/about_me/png-retro-vinyl-disc-player-electronics-white-background-gramophone_53876-872224 Background Removed.png",
+        src: "assets/imgs/about_me/png-retro-vinyl-disc-player-electronics-white-background-gramophone_53876-872224 Background Removed.jpg",
         alt: "Music Player",
         link: "https://www.youtube.com/watch?v=6hmfOaZktVU&list=RD6hmfOaZktVU&start_radio=1"
       },
@@ -95,40 +95,36 @@ layout: default
       ]
     };
 
-    // Logic for Bowl Clock
-    const R = 60; // Adjusted for 180px bowl
-    const CENTER_COORD = 90; // 180 / 2
+    // Bowl Clock — scaled for 180px bowl (ref: 320px → scale 0.5625)
+    // inner radius = (180 - 20) / 2 = 80px  →  R ≈ 80 * 0.726 ≈ 58
+    const R = 58;
+    const CX = 90; // half of 180px bowl
+    const CY = 90;
 
-    function pad(n) {
-      return String(n).padStart(2, '0');
-    }
+    function pad(n) { return String(n).padStart(2, '0'); }
 
     function tick() {
       const now = new Date();
-      // Cairo is UTC+2
-      const cairoDate = new Date(now.toLocaleString('en-US', { timeZone: 'Africa/Cairo' }));
-      
-      const h = cairoDate.getHours() % 12;
-      const m = cairoDate.getMinutes();
-      const s = cairoDate.getSeconds();
+      const cairo = new Date(now.toLocaleString('en-US', { timeZone: 'Africa/Cairo' }));
+
+      const h = cairo.getHours() % 12;
+      const m = cairo.getMinutes();
+      const s = cairo.getSeconds();
 
       const hDeg = (h + m / 60 + s / 3600) * 30;
       const mDeg = (m + s / 60) * 6;
       const sDeg = s * 6;
 
-      document.getElementById('hour').style.transform = 'rotate(' + hDeg + 'deg)';
+      document.getElementById('hour').style.transform   = 'rotate(' + hDeg + 'deg)';
       document.getElementById('minute').style.transform = 'rotate(' + mDeg + 'deg)';
 
       const rad = (sDeg - 90) * Math.PI / 180;
-      const x = Math.cos(rad) * R;
-      const y = Math.sin(rad) * R;
-
       const dot = document.getElementById('dot');
-      dot.style.left = (CENTER_COORD + x) + 'px';
-      dot.style.top  = (CENTER_COORD + y) + 'px';
+      dot.style.left = (CX + Math.cos(rad) * R) + 'px';
+      dot.style.top  = (CY + Math.sin(rad) * R) + 'px';
 
       document.getElementById('time-label').textContent =
-        `🇪🇬 ${pad(cairoDate.getHours())}:${pad(m)}:${pad(s)}`;
+        '🇪🇬 ' + pad(cairo.getHours()) + ':' + pad(m) + ':' + pad(s);
     }
 
     tick();
