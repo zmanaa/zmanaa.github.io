@@ -2,6 +2,17 @@
 layout: default
 ---
 <div class="hero-editorial">
+  <!-- Bowl Clock (Moved to top) -->
+  <link rel="stylesheet" href="{{ '/assets/css/shelf.css' | prepend: site.baseurl }}">
+  <div class="vignette-clock-container" style="margin-bottom: 3rem;">
+    <div id="bowl">
+      <div id="dot"></div>
+      <div id="hour" class="hand"></div>
+      <div id="minute" class="hand"></div>
+    </div>
+    <div id="time-label">🇪🇬 —</div>
+  </div>
+
   <div class="hero-intro">
     <h1>Hello, I'm Zeyad.</h1>
     <p>
@@ -36,29 +47,6 @@ layout: default
   </div>
 </div>
 
-<!-- ========== Digital Shelf Vignette (To DISABLE: Comment out this section and the CSS link below) ========== -->
-<link rel="stylesheet" href="{{ '/assets/css/shelf.css' | prepend: site.baseurl }}">
-<section class="shelf-vignette">
-  <div class="vignette-clock-container">
-    <div id="bowl">
-      <div id="dot"></div>
-      <div id="hour" class="hand"></div>
-      <div id="minute" class="hand"></div>
-    </div>
-    <div id="time-label">🇪🇬 —</div>
-  </div>
-
-  <div class="shelf-system">
-    <img src="{{ '/assets/imgs/about_me/shelf.png' | prepend: site.baseurl }}" class="shelf-unit-img" alt="Minimalist Shelf">
-    <div class="vignette-objects" id="vignetteObjects">
-      <!-- Objects will be populated by JS -->
-    </div>
-  </div>
-  
-  <div style="margin-top: 2rem; font-size: 0.8rem; opacity: 0.6; font-style: italic;">
-    Clock design inspired by Bowl Clock.
-  </div>
-</section>
 
 <script>
   (function() {
@@ -125,41 +113,6 @@ layout: default
 
     tick();
     setInterval(tick, 1000);
-
-    const shelfContainer = document.getElementById('vignetteObjects');
-    
-    function createGroup(data, id) {
-      const div = document.createElement('div');
-      div.className = 'vignette-item';
-      div.dataset.id = id;
-      data.forEach(sub => {
-        const img = document.createElement('img');
-        img.src = sub.src;
-        img.alt = sub.alt;
-        div.appendChild(img);
-      });
-      return div;
-    }
-
-    function createSingle(data) {
-      const div = document.createElement('div');
-      div.className = 'vignette-item';
-      div.dataset.id = data.id;
-      const img = document.createElement('img');
-      img.src = data.src;
-      img.alt = data.alt;
-      div.appendChild(img);
-      if (data.link) {
-        div.onclick = () => window.open(data.link, '_blank');
-      }
-      return div;
-    }
-
-    shelfContainer.appendChild(createGroup(items.books, 'books'));
-    shelfContainer.appendChild(createSingle(items.naguib));
-    shelfContainer.appendChild(createSingle(items.gramophone));
-    shelfContainer.appendChild(createSingle(items.plant));
-    shelfContainer.appendChild(createGroup(items.films, 'films'));
   })();
 </script>
 
