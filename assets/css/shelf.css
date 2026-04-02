@@ -112,8 +112,9 @@
 .shelf-system {
   position: relative;
   width: 100%;
-  max-width: 1000px;
-  height: 600px;
+  max-width: 700px; /* Reduced for better focus */
+  aspect-ratio: 1 / 1;
+  height: auto;
   margin: 0 auto;
 }
 
@@ -157,24 +158,27 @@
   filter: drop-shadow(0 10px 15px var(--shelf-hover-shadow));
 }
 
-/* Specific item adjustments for wooden shelf */
-.vignette-item[data-id="frame"] { width: 55px; top: 125px; left: 13%; }
-.vignette-item[data-id="lamp"] { width: 85px; top: 220px; left: 15%; }
-.vignette-item[data-id="books"] { display: flex; gap: 2px; top: 155px; left: 50%; transform: translateX(-50%); width: auto; height: 110px; align-items: flex-end; }
-.vignette-item[data-id="books"] img { width: auto; height: 100%; width: 45px; object-fit: cover; border-radius: 2px; border-left: 2px solid rgba(0,0,0,0.1); }
-.vignette-item[data-id="plant"] { width: 90px; top: 155px; right: 15%; }
+/* Specific item adjustments for 1:1 wooden shelf */
+/* Tiers: Top ~35%, Middle ~53%, Bottom ~71% */
+
+/* Top Shelf */
+.vignette-item[data-id="frame"] { width: 8%; top: 34.5%; left: 18%; transform: translateY(-100%); }
+.vignette-item[data-id="lamp"] { width: 12%; top: 34.5%; left: 24%; transform: translateY(-100%); }
+.vignette-item[data-id="books"] { display: flex; gap: 2px; top: 34.5%; left: 50%; transform: translate(-50%, -100%); width: auto; height: 18%; align-items: flex-end; }
+.vignette-item[data-id="books"] img { width: auto; height: 100%; width: 35px; object-fit: cover; border-radius: 2px; border-left: 2px solid rgba(0,0,0,0.1); }
+.vignette-item[data-id="plant"] { width: 14%; top: 34.5%; right: 20%; transform: translateY(-100%); }
 .vignette-item[data-id="plant"] img { mix-blend-mode: multiply; }
 
-.vignette-item[data-id="gramophone"] { width: 180px; top: 310px; left: 50%; transform: translateX(-50%); }
+/* Middle Shelf */
+.vignette-item[data-id="gramophone"] { width: 28%; top: 52.5%; left: 50%; transform: translate(-50%, -100%); }
 
-.vignette-item[data-id="films"] { display: flex; gap: 6px; top: 510px; left: 50%; transform: translateX(-50%); width: auto; height: 110px; align-items: flex-end; }
-.vignette-item[data-id="films"] img { width: 80px; height: 110px; object-fit: cover; border-radius: 4px; box-shadow: 2px 4px 8px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.2); }
+/* Bottom Shelf */
+.vignette-item[data-id="films"] { display: flex; gap: 6px; top: 71%; left: 50%; transform: translate(-50%, -100%); width: auto; height: 18%; align-items: flex-end; }
+.vignette-item[data-id="films"] img { width: 60px; height: 100%; object-fit: cover; border-radius: 4px; box-shadow: 2px 4px 8px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.2); }
 
 /* Responsive Adjustments */
 @media (max-width: 800px) {
   .shelf-system {
-    height: 400px;
-    transform: scale(0.8);
-    transform-origin: top center;
+    max-width: 90%;
   }
 }
