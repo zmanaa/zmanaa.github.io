@@ -23,7 +23,6 @@ experiences:
 - place: "KFUPM"
   time: "Jan. 2023 - Dec. 2024"
   title: "M.S. in Aerospace Engineering"
-  subtitle: "<i></i>"
   category: "school"
   logo: "/assets/logos/logo_kfupm.png"
 
@@ -37,7 +36,7 @@ experiences:
 - place: "Egyptian Space Agency"
   time: "Aug. 2021 - Jul. 2022"
   title: "Research Intern"
-  subtitle: "ADCS Subsystem Lab"
+  subtitle: "Working on ADCS subsystem"
   category: "work"
   logo: "/assets/logos/logo_egsa.png"
 
