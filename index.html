@@ -11,7 +11,7 @@ layout: default
       <div id="minute" class="hand"></div>
     </div>
     <div id="time-label">🇪🇬 —</div>
-    <div class="bowl-note">Flowing with time</div>
+    <div class="bowl-note">The clock design is inspired from Kehai Wall Clock by Makoto Koizumi.</div>
   </div>
 
   <div class="hero-intro">
@@ -24,12 +24,14 @@ layout: default
         group</a>. I recently completed my master's degree at
       <a href="https://kfupm.edu.sa/">King Fahd University for Petroleum and Minerals (KFUPM)</a>, KSA, where my thesis
       applied data-driven learning techniques for modeling,
-      and control for dynamical systems. Prior to this, I completed my bachelor's degree in Aerospace Engineering from my
+      and control for dynamical systems. Prior to this, I completed my bachelor's degree in Aerospace Engineering from
+      my
       beloved <a href="https://www.zewailcity.edu.eg//">Zewail
         City of Science and Technology</a>, Egypt.
     </p>
     <p>
-      I like calligraphy and typography, something I do to relax and to be present at the moment. You can see sample of my
+      I like calligraphy and typography, something I do to relax and to be present at the moment. You can see sample of
+      my
       work <a href="https://dribbble.com/zeyad_mana3//">here</a>.
       I also like history, and anthropology. Especially, how human evolved and invented many constructs to survive. I
       also, sometimes, <a href="https://nameem.com/zmmanaa-gmail-com//">wirte</a> articles in Arabic.
@@ -46,23 +48,11 @@ layout: default
       Keywords: Data-driven modeling, Control theory, Optimization, Model reduction.
     </div>
   </div>
-
-  <!-- Media Gallery Row -->
-  <section class="media-gallery">
-    <div class="gallery-row">
-      <h5>Currently Reading</h5>
-      <div class="gallery-strip" id="readingStrip"></div>
-    </div>
-    <div class="gallery-row">
-      <h5>Film Watchlist</h5>
-      <div class="gallery-strip" id="filmStrip"></div>
-    </div>
-  </section>
 </div>
 
 
 <script>
-  (function() {
+  (function () {
     const items = {
       naguib: {
         id: "frame",
@@ -97,9 +87,9 @@ layout: default
 
     // Bowl Clock — Adoption of v6 logic (scaled for 180px bowl)
     const BORDER = 8;
-    const SIZE   = 180;
-    const CX     = (SIZE - BORDER * 2) / 2;
-    const R      = 60;
+    const SIZE = 180;
+    const CX = (SIZE - BORDER * 2) / 2;
+    const R = 60;
 
     function pad(n) { return String(n).padStart(2, '0'); }
 
@@ -112,13 +102,13 @@ layout: default
       const m = cairo.getMinutes();
       const s = cairo.getSeconds();
 
-      document.getElementById('hour').style.transform   = 'rotate(' + ((h + m/60 + s/3600) * 30) + 'deg)';
-      document.getElementById('minute').style.transform = 'rotate(' + ((m + s/60) * 6) + 'deg)';
+      document.getElementById('hour').style.transform = 'rotate(' + ((h + m / 60 + s / 3600) * 30) + 'deg)';
+      document.getElementById('minute').style.transform = 'rotate(' + ((m + s / 60) * 6) + 'deg)';
 
       const rad = (s * 6 - 90) * Math.PI / 180;
       const dot = document.getElementById('dot');
       dot.style.left = (CX + Math.cos(rad) * R) + 'px';
-      dot.style.top  = (CX + Math.sin(rad) * R) + 'px';
+      dot.style.top = (CX + Math.sin(rad) * R) + 'px';
 
       document.getElementById('time-label').textContent =
         '🇪🇬 ' + pad(cairo.getHours()) + ':' + pad(m) + ':' + pad(s);
@@ -126,26 +116,6 @@ layout: default
 
     tick();
     setInterval(tick, 1000);
-
-    // Populating Media Gallery
-    const readingStrip = document.getElementById('readingStrip');
-    const filmStrip = document.getElementById('filmStrip');
-
-    function createGalleryItem(sub) {
-      const div = document.createElement('div');
-      div.className = 'gallery-item';
-      const img = document.createElement('img');
-      img.src = sub.src;
-      img.alt = sub.alt;
-      div.appendChild(img);
-      if (sub.link) {
-        div.onclick = () => window.open(sub.link, '_blank');
-      }
-      return div;
-    }
-
-    items.books.forEach(book => readingStrip.appendChild(createGalleryItem(book)));
-    items.films.forEach(film => filmStrip.appendChild(createGalleryItem(film)));
   })();
 </script>
 
@@ -156,7 +126,8 @@ layout: default
   <ul>
     <li>
       <b style="color: #c72025; font-weight: normal;">[Mar. 24-26, 2026]</b>&nbsp&nbsp
-      I presented my work at the <a href="https://www.beneluxmeeting.nl/">Benelux Meeting on Systems and Control 2026</a> in Lommel, Belgium!
+      I presented my work at the <a href="https://www.beneluxmeeting.nl/">Benelux Meeting on Systems and Control
+        2026</a> in Lommel, Belgium!
     </li>
     <li>
       <b style="color: #c72025; font-weight: normal;">[Jun. 03-06, 2025]</b>&nbsp&nbsp
