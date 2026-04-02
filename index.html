@@ -11,6 +11,7 @@ layout: default
       <div id="minute" class="hand"></div>
     </div>
     <div id="time-label">🇪🇬 —</div>
+    <div class="bowl-note">Flowing with time</div>
   </div>
 
   <div class="hero-intro">
@@ -45,6 +46,18 @@ layout: default
       Keywords: Data-driven modeling, Control theory, Optimization, Model reduction.
     </div>
   </div>
+
+  <!-- Media Gallery Row -->
+  <section class="media-gallery">
+    <div class="gallery-row">
+      <h5>Currently Reading</h5>
+      <div class="gallery-strip" id="readingStrip"></div>
+    </div>
+    <div class="gallery-row">
+      <h5>Film Watchlist</h5>
+      <div class="gallery-strip" id="filmStrip"></div>
+    </div>
+  </section>
 </div>
 
 
@@ -113,6 +126,26 @@ layout: default
 
     tick();
     setInterval(tick, 1000);
+
+    // Populating Media Gallery
+    const readingStrip = document.getElementById('readingStrip');
+    const filmStrip = document.getElementById('filmStrip');
+
+    function createGalleryItem(sub) {
+      const div = document.createElement('div');
+      div.className = 'gallery-item';
+      const img = document.createElement('img');
+      img.src = sub.src;
+      img.alt = sub.alt;
+      div.appendChild(img);
+      if (sub.link) {
+        div.onclick = () => window.open(sub.link, '_blank');
+      }
+      return div;
+    }
+
+    items.books.forEach(book => readingStrip.appendChild(createGalleryItem(book)));
+    items.films.forEach(film => filmStrip.appendChild(createGalleryItem(film)));
   })();
 </script>
 
