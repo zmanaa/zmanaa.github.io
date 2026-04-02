@@ -30,7 +30,7 @@
 
 #bowl {
   position: relative;
-  width: 180px; /* Scaled down from 280px */
+  width: 180px; 
   height: 180px;
   border-radius: 50%;
   background: radial-gradient(circle at 40% 38%, #F7F3E2 60%, #E8E3CC 100%);
@@ -47,7 +47,7 @@
   border: 3px solid rgba(200, 194, 170, 0.4);
 }
 
-.bowl-hand {
+.hand {
   position: absolute;
   left: 50%;
   bottom: 50%;
@@ -55,7 +55,7 @@
   border-radius: 20px 20px 6px 6px;
 }
 
-#bowl-hour {
+#hour {
   width: 6px;
   height: 45px;
   margin-left: -3px;
@@ -65,7 +65,7 @@
   z-index: 2;
 }
 
-#bowl-minute {
+#minute {
   width: 4px;
   height: 65px;
   margin-left: -2px;
@@ -75,7 +75,7 @@
   z-index: 1;
 }
 
-#bowl-dot {
+#dot {
   position: absolute;
   width: 10px;
   height: 10px;
@@ -87,7 +87,7 @@
   z-index: 4;
 }
 
-#bowl-center {
+#center {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -100,12 +100,13 @@
   z-index: 5;
 }
 
-.local-time-label {
+#time-label {
   margin-top: 15px;
   font-family: 'Inter', sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   color: #888;
   letter-spacing: 0.15em;
+  text-align: center;
 }
 
 /* Shelf Structure */
@@ -151,6 +152,7 @@
   width: 100%;
   height: auto;
   pointer-events: none;
+  object-fit: contain; /* Prevent cropping */
 }
 
 .vignette-item:hover {
@@ -162,19 +164,18 @@
 /* Tiers: Top ~35%, Middle ~53%, Bottom ~71% */
 
 /* Top Shelf */
-.vignette-item[data-id="frame"] { width: 8%; top: 34.5%; left: 18%; transform: translateY(-100%); }
-.vignette-item[data-id="lamp"] { width: 12%; top: 34.5%; left: 24%; transform: translateY(-100%); }
-.vignette-item[data-id="books"] { display: flex; gap: 2px; top: 34.5%; left: 50%; transform: translate(-50%, -100%); width: auto; height: 18%; align-items: flex-end; }
-.vignette-item[data-id="books"] img { width: auto; height: 100%; width: 35px; object-fit: cover; border-radius: 2px; border-left: 2px solid rgba(0,0,0,0.1); }
+.vignette-item[data-id="frame"] { width: 10%; top: 34.5%; left: 22%; transform: translateY(-100%); }
+.vignette-item[data-id="books"] { display: flex; gap: 2px; top: 34.5%; left: 50%; transform: translate(-50%, -100%); width: auto; height: 16%; align-items: flex-end; }
+.vignette-item[data-id="books"] img { width: auto; height: 100%; border-radius: 2px; border-left: 2px solid rgba(0,0,0,0.1); }
 .vignette-item[data-id="plant"] { width: 14%; top: 34.5%; right: 20%; transform: translateY(-100%); }
 .vignette-item[data-id="plant"] img { mix-blend-mode: multiply; }
 
 /* Middle Shelf */
-.vignette-item[data-id="gramophone"] { width: 28%; top: 52.5%; left: 50%; transform: translate(-50%, -100%); }
+.vignette-item[data-id="gramophone"] { width: 28%; top: 53.5%; left: 50%; transform: translate(-50%, -100%); }
 
 /* Bottom Shelf */
-.vignette-item[data-id="films"] { display: flex; gap: 6px; top: 71%; left: 50%; transform: translate(-50%, -100%); width: auto; height: 18%; align-items: flex-end; }
-.vignette-item[data-id="films"] img { width: 60px; height: 100%; object-fit: cover; border-radius: 4px; box-shadow: 2px 4px 8px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.2); }
+.vignette-item[data-id="films"] { display: flex; gap: 6px; top: 72.5%; left: 50%; transform: translate(-50%, -100%); width: auto; height: 18%; align-items: flex-end; }
+.vignette-item[data-id="films"] img { width: auto; height: 100%; border-radius: 4px; box-shadow: 2px 4px 8px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.2); }
 
 /* Responsive Adjustments */
 @media (max-width: 800px) {

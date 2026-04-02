@@ -41,12 +41,12 @@ layout: default
 <section class="shelf-vignette">
   <div class="vignette-clock-container">
     <div id="bowl">
-      <div id="bowl-dot"></div>
-      <div id="bowl-hour" class="bowl-hand"></div>
-      <div id="bowl-minute" class="bowl-hand"></div>
-      <div id="bowl-center"></div>
+      <div id="dot"></div>
+      <div id="hour" class="hand"></div>
+      <div id="minute" class="hand"></div>
+      <div id="center"></div>
     </div>
-    <div class="local-time-label" id="localTimeLabel">🇪🇬 12:58 PM</div>
+    <div id="time-label">🇪🇬 —</div>
   </div>
 
   <div class="shelf-system">
@@ -64,17 +64,11 @@ layout: default
 <script>
   (function() {
     const items = {
-      framePhoto: {
+      naguib: {
         id: "frame",
-        src: "assets/imgs/about_me/egypt_artifacts/art_1.png",
-        alt: "Cairo Artifact",
-        link: "https://en.wikipedia.org/wiki/Egyptian_Museum"
-      },
-      lamp: {
-        id: "lamp",
-        src: "assets/imgs/about_me/egypt_artifacts/art_2.png",
-        alt: "Cairo Artifact 2",
-        link: ""
+        src: "assets/imgs/about_me/egypt_artifacts/naguib.jpg",
+        alt: "Naguib Mahfouz",
+        link: "https://en.wikipedia.org/wiki/Naguib_Mahfouz"
       },
       books: [
         { src: "assets/imgs/about_me/books/book_1.jpg", alt: "Book 1" },
@@ -102,47 +96,43 @@ layout: default
     };
 
     // Logic for Bowl Clock
-    const R_DOT = 60; // Adjusted for smaller bowl (180px total)
-    const CENTER = 90; // 180 / 2
+    const R = 60; // Adjusted for 180px bowl
+    const CENTER_COORD = 90; // 180 / 2
 
     function pad(n) {
       return String(n).padStart(2, '0');
     }
 
-    function updateClock() {
+    function tick() {
       const now = new Date();
       // Cairo is UTC+2
-      const options = { timeZone: 'Africa/Cairo', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
-      const cairoTimeString = now.toLocaleTimeString('en-GB', options);
-      const [h_str, m_str, s_str] = cairoTimeString.split(':');
+      const cairoDate = new Date(now.toLocaleString('en-US', { timeZone: 'Africa/Cairo' }));
       
-      const h_num = parseInt(h_str);
-      const m_num = parseInt(m_str);
-      const s_num = parseInt(s_str);
+      const h = cairoDate.getHours() % 12;
+      const m = cairoDate.getMinutes();
+      const s = cairoDate.getSeconds();
 
-      // Analog positions
-      const hDeg = (h_num % 12 + m_num / 60 + s_num / 3600) * 30;
-      const mDeg = (m_num + s_num / 60) * 6;
-      const sDeg = s_num * 6;
+      const hDeg = (h + m / 60 + s / 3600) * 30;
+      const mDeg = (m + s / 60) * 6;
+      const sDeg = s * 6;
 
-      document.getElementById('bowl-hour').style.transform = `rotate(${hDeg}deg)`;
-      document.getElementById('bowl-minute').style.transform = `rotate(${mDeg}deg)`;
+      document.getElementById('hour').style.transform = 'rotate(' + hDeg + 'deg)';
+      document.getElementById('minute').style.transform = 'rotate(' + mDeg + 'deg)';
 
-      // Seconds dot (around perimeter)
       const rad = (sDeg - 90) * Math.PI / 180;
-      const x = Math.cos(rad) * R_DOT;
-      const y = Math.sin(rad) * R_DOT;
+      const x = Math.cos(rad) * R;
+      const y = Math.sin(rad) * R;
 
-      const dot = document.getElementById('bowl-dot');
-      dot.style.left = (CENTER + x) + 'px';
-      dot.style.top  = (CENTER + y) + 'px';
+      const dot = document.getElementById('dot');
+      dot.style.left = (CENTER_COORD + x) + 'px';
+      dot.style.top  = (CENTER_COORD + y) + 'px';
 
-      // Digital label
-      document.getElementById('localTimeLabel').innerHTML = `🇪🇬 ${h_str}:${m_str}:${s_str}`;
+      document.getElementById('time-label').textContent =
+        `🇪🇬 ${pad(cairoDate.getHours())}:${pad(m)}:${pad(s)}`;
     }
 
-    setInterval(updateClock, 1000);
-    updateClock();
+    tick();
+    setInterval(tick, 1000);
 
     const shelfContainer = document.getElementById('vignetteObjects');
     
@@ -173,8 +163,7 @@ layout: default
       return div;
     }
 
-    shelfContainer.appendChild(createSingle(items.framePhoto));
-    shelfContainer.appendChild(createSingle(items.lamp));
+    shelfContainer.appendChild(createSingle(items.naguib));
     shelfContainer.appendChild(createGroup(items.books, 'books'));
     shelfContainer.appendChild(createSingle(items.plant));
     shelfContainer.appendChild(createSingle(items.gramophone));
