@@ -36,6 +36,152 @@ layout: default
   </div>
 </div>
 
+<!-- ========== Digital Shelf Vignette (To DISABLE: Comment out this section and the CSS link below) ========== -->
+<link rel="stylesheet" href="{{ '/assets/css/shelf.css' | prepend: site.baseurl }}">
+<section class="shelf-vignette">
+  <div class="vignette-clock-container">
+    <div id="bowl">
+      <div id="bowl-dot"></div>
+      <div id="bowl-hour" class="bowl-hand"></div>
+      <div id="bowl-minute" class="bowl-hand"></div>
+      <div id="bowl-center"></div>
+    </div>
+    <div class="local-time-label" id="localTimeLabel">🇪🇬 12:58 PM</div>
+  </div>
+
+  <div class="shelf-system">
+    <img src="{{ '/assets/imgs/about_me/shelf.png' | prepend: site.baseurl }}" class="shelf-unit-img" alt="Minimalist Shelf">
+    <div class="vignette-objects" id="vignetteObjects">
+      <!-- Objects will be populated by JS -->
+    </div>
+  </div>
+  
+  <div style="margin-top: 2rem; font-size: 0.8rem; opacity: 0.6; font-style: italic;">
+    Clock design inspired by Bowl Clock.
+  </div>
+</section>
+
+<script>
+  (function() {
+    const items = {
+      framePhoto: {
+        id: "frame",
+        src: "assets/imgs/about_me/egypt_artifacts/art_1.png",
+        alt: "Cairo Artifact",
+        link: "https://en.wikipedia.org/wiki/Egyptian_Museum"
+      },
+      lamp: {
+        id: "lamp",
+        src: "assets/imgs/about_me/egypt_artifacts/art_2.png",
+        alt: "Cairo Artifact 2",
+        link: ""
+      },
+      books: [
+        { src: "assets/imgs/about_me/books/book_1.jpg", alt: "Book 1" },
+        { src: "assets/imgs/about_me/books/book_2.jpg", alt: "Book 2" },
+        { src: "assets/imgs/about_me/books/book_3.jpg", alt: "Book 3" },
+        { src: "assets/imgs/about_me/books/book_4.jpg", alt: "Book 4" }
+      ],
+      plant: {
+        id: "plant",
+        src: "assets/imgs/about_me/plant.avif",
+        alt: "Potted Plant",
+        link: ""
+      },
+      gramophone: {
+        id: "gramophone",
+        src: "assets/imgs/about_me/png-retro-vinyl-disc-player-electronics-white-background-gramophone_53876-872224 Background Removed.png",
+        alt: "Music Player",
+        link: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      },
+      films: [
+        { src: "assets/imgs/about_me/films/film_1.jpg", alt: "Film 1" },
+        { src: "assets/imgs/about_me/films/film_2.jpg", alt: "Film 2" },
+        { src: "assets/imgs/about_me/films/film_3.jpg", alt: "Film 3" }
+      ]
+    };
+
+    // Logic for Bowl Clock
+    const R_DOT = 93; // Adjusted for scaled bowl (280px total, inner radius approx)
+    const CENTER = 140; // 280 / 2
+
+    function pad(n) {
+      return String(n).padStart(2, '0');
+    }
+
+    function updateClock() {
+      const now = new Date();
+      // Cairo is UTC+2
+      const options = { timeZone: 'Africa/Cairo', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+      const cairoTimeString = now.toLocaleTimeString('en-GB', options);
+      const [h_str, m_str, s_str] = cairoTimeString.split(':');
+      
+      const h_num = parseInt(h_str);
+      const m_num = parseInt(m_str);
+      const s_num = parseInt(s_str);
+
+      // Analog positions
+      const hDeg = (h_num % 12 + m_num / 60 + s_num / 3600) * 30;
+      const mDeg = (m_num + s_num / 60) * 6;
+      const sDeg = s_num * 6;
+
+      document.getElementById('bowl-hour').style.transform = `rotate(${hDeg}deg)`;
+      document.getElementById('bowl-minute').style.transform = `rotate(${mDeg}deg)`;
+
+      // Seconds dot (around perimeter)
+      const rad = (sDeg - 90) * Math.PI / 180;
+      const x = Math.cos(rad) * R_DOT;
+      const y = Math.sin(rad) * R_DOT;
+
+      const dot = document.getElementById('bowl-dot');
+      dot.style.left = (CENTER + x) + 'px';
+      dot.style.top  = (CENTER + y) + 'px';
+
+      // Digital label
+      document.getElementById('localTimeLabel').innerHTML = `🇪🇬 ${h_str}:${m_str}:${s_str}`;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    const shelfContainer = document.getElementById('vignetteObjects');
+    
+    function createGroup(data, id) {
+      const div = document.createElement('div');
+      div.className = 'vignette-item';
+      div.dataset.id = id;
+      data.forEach(sub => {
+        const img = document.createElement('img');
+        img.src = sub.src;
+        img.alt = sub.alt;
+        div.appendChild(img);
+      });
+      return div;
+    }
+
+    function createSingle(data) {
+      const div = document.createElement('div');
+      div.className = 'vignette-item';
+      div.dataset.id = data.id;
+      const img = document.createElement('img');
+      img.src = data.src;
+      img.alt = data.alt;
+      div.appendChild(img);
+      if (data.link) {
+        div.onclick = () => window.open(data.link, '_blank');
+      }
+      return div;
+    }
+
+    shelfContainer.appendChild(createSingle(items.framePhoto));
+    shelfContainer.appendChild(createSingle(items.lamp));
+    shelfContainer.appendChild(createGroup(items.books, 'books'));
+    shelfContainer.appendChild(createSingle(items.plant));
+    shelfContainer.appendChild(createSingle(items.gramophone));
+    shelfContainer.appendChild(createGroup(items.films, 'films'));
+  })();
+</script>
+
 
 <!-- ========== News ========== -->
 <section class="docs-section" id="news">

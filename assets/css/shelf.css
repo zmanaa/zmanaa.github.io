@@ -1,0 +1,179 @@
+/* Digital Shelf Vignette Styles */
+:root {
+  --shelf-bg: #f3f3f1;
+  --shelf-support: #d1d1d1;
+  --shelf-plank: #ffffff;
+  --shelf-shadow: rgba(0, 0, 0, 0.05);
+  --shelf-hover-shadow: rgba(0, 0, 0, 0.12);
+}
+
+.shelf-vignette {
+  background-color: var(--shelf-bg);
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin: 4rem 0;
+  border-radius: 20px;
+}
+
+/* Bowl Clock */
+.vignette-clock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+#bowl {
+  position: relative;
+  width: 280px; /* Scaled down slightly from 320px for vignette */
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 38%, #F7F3E2 60%, #E8E3CC 100%);
+  border: 12px solid #E0DAC2;
+  overflow: hidden;
+  box-shadow: 0 4px 20px var(--shelf-shadow);
+}
+
+#bowl::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 3px solid rgba(200, 194, 170, 0.4);
+}
+
+.bowl-hand {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform-origin: 50% 100%;
+  border-radius: 20px 20px 6px 6px;
+}
+
+#bowl-hour {
+  width: 9px;
+  height: 70px;
+  margin-left: -4.5px;
+  background: #5A5A68;
+  opacity: 0.75;
+  filter: blur(3px);
+  z-index: 2;
+}
+
+#bowl-minute {
+  width: 6px;
+  height: 100px;
+  margin-left: -3px;
+  background: #5A5A68;
+  opacity: 0.68;
+  filter: blur(2px);
+  z-index: 1;
+}
+
+#bowl-dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #C0506A;
+  opacity: 0.9;
+  filter: blur(1.5px);
+  transform: translate(-50%, -50%);
+  z-index: 4;
+}
+
+#bowl-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #6B6B7A;
+  opacity: 0.55;
+  z-index: 5;
+}
+
+.local-time-label {
+  margin-top: 15px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #888;
+  letter-spacing: 0.15em;
+}
+
+/* Shelf Structure */
+.shelf-system {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+.shelf-unit-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Object Overlay System */
+.vignette-objects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.vignette-item {
+  position: absolute;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+  transform-origin: center bottom;
+  cursor: pointer;
+}
+
+.vignette-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+.vignette-item:hover {
+  transform: translateY(-8px) scale(1.05);
+  filter: drop-shadow(0 10px 15px var(--shelf-hover-shadow));
+}
+
+/* Specific item adjustments for wooden shelf */
+.vignette-item[data-id="frame"] { width: 45px; top: -15px; left: 12%; }
+.vignette-item[data-id="lamp"] { width: 70px; top: 75px; left: 18%; }
+.vignette-item[data-id="books"] { display: flex; gap: 2px; top: 110px; left: 50%; transform: translateX(-50%); width: auto; }
+.vignette-item[data-id="books"] img { width: 35px; height: 90px; object-fit: cover; border-radius: 2px; }
+.vignette-item[data-id="plant"] { width: 70px; top: 110px; right: 18%; }
+
+.vignette-item[data-id="gramophone"] { width: 140px; top: 260px; left: 50%; transform: translateX(-50%); }
+
+.vignette-item[data-id="films"] { display: flex; gap: 2px; top: 480px; left: 50%; transform: translateX(-50%); width: auto; }
+.vignette-item[data-id="film"] { width: 35px; height: 90px; object-fit: cover; border-radius: 2px; }
+
+/* Responsive Adjustments */
+@media (max-width: 800px) {
+  .shelf-system {
+    height: 400px;
+    transform: scale(0.8);
+    transform-origin: top center;
+  }
+}
