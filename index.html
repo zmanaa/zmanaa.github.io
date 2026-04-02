@@ -44,7 +44,6 @@ layout: default
       <div id="dot"></div>
       <div id="hour" class="hand"></div>
       <div id="minute" class="hand"></div>
-      <div id="center"></div>
     </div>
     <div id="time-label">🇪🇬 —</div>
   </div>
@@ -95,33 +94,30 @@ layout: default
       ]
     };
 
-    // Bowl Clock — scaled for 180px bowl (ref: 320px → scale 0.5625)
-    // inner radius = (180 - 20) / 2 = 80px  →  R ≈ 80 * 0.726 ≈ 58
-    const R = 58;
-    const CX = 90; // half of 180px bowl
-    const CY = 90;
+    // Bowl Clock — Adoption of v6 logic (scaled for 180px bowl)
+    const BORDER = 8;
+    const SIZE   = 180;
+    const CX     = (SIZE - BORDER * 2) / 2;
+    const R      = 60;
 
     function pad(n) { return String(n).padStart(2, '0'); }
 
     function tick() {
       const now = new Date();
+      // Cairo is UTC+2
       const cairo = new Date(now.toLocaleString('en-US', { timeZone: 'Africa/Cairo' }));
 
       const h = cairo.getHours() % 12;
       const m = cairo.getMinutes();
       const s = cairo.getSeconds();
 
-      const hDeg = (h + m / 60 + s / 3600) * 30;
-      const mDeg = (m + s / 60) * 6;
-      const sDeg = s * 6;
+      document.getElementById('hour').style.transform   = 'rotate(' + ((h + m/60 + s/3600) * 30) + 'deg)';
+      document.getElementById('minute').style.transform = 'rotate(' + ((m + s/60) * 6) + 'deg)';
 
-      document.getElementById('hour').style.transform   = 'rotate(' + hDeg + 'deg)';
-      document.getElementById('minute').style.transform = 'rotate(' + mDeg + 'deg)';
-
-      const rad = (sDeg - 90) * Math.PI / 180;
+      const rad = (s * 6 - 90) * Math.PI / 180;
       const dot = document.getElementById('dot');
       dot.style.left = (CX + Math.cos(rad) * R) + 'px';
-      dot.style.top  = (CY + Math.sin(rad) * R) + 'px';
+      dot.style.top  = (CX + Math.sin(rad) * R) + 'px';
 
       document.getElementById('time-label').textContent =
         '🇪🇬 ' + pad(cairo.getHours()) + ':' + pad(m) + ':' + pad(s);
@@ -159,10 +155,10 @@ layout: default
       return div;
     }
 
-    shelfContainer.appendChild(createSingle(items.naguib));
     shelfContainer.appendChild(createGroup(items.books, 'books'));
-    shelfContainer.appendChild(createSingle(items.plant));
+    shelfContainer.appendChild(createSingle(items.naguib));
     shelfContainer.appendChild(createSingle(items.gramophone));
+    shelfContainer.appendChild(createSingle(items.plant));
     shelfContainer.appendChild(createGroup(items.films, 'films'));
   })();
 </script>
