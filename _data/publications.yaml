@@ -1,4 +1,19 @@
 papers:
+  - title: "Confidentiality of Linear Control Systems with Quadratic Output Under Sensor Attacks"
+    image: "/assets/publications/2026_ifac_wc/blck_diag.png"
+    authors: "<b>Zeyad M. Manaa</b>, Nathan van de Wouw, Michelle S. Chong"
+    venue: "Accepted for presentation at IFAC World Congress 2026"
+    date: "August 23-28, 2026 Busan, Republic of Korea"
+    paper_pdf: "https://arxiv.org/pdf/2605.06493"
+    selected: y
+
+  - title: "Confidentiality of Linear Systems with Quadratic Output"
+    image: "/assets/publications/2026_benelux/blck_diag.png"
+    authors: "<b>Zeyad M. Manaa</b>, Nathan van de Wouw, Michelle S. Chong"
+    venue: "Benelux Meeting on Systems and Control 2026, Lommel, Belgium, March 24 - 26, 2026"
+    paper_pdf: "/assets/publications/2026_benelux/Manaa__Book_of_Abstracts_45th_Benelux_Meeting.pdf"
+    selected: y
+
   - title: '<a href="https://zmanaa.github.io/koetc/">KOETC: Koopman Operator-Based Event-Triggered Control from Data</a>'
     image: "/assets/publications/2024_KOETC/image.png"
     authors: "<b>Zeyad M. Manaa</b>, Ayman M. Abdallah, Mohamed Ismail, Sami El-Ferik"
@@ -48,4 +63,3 @@ papers:
     #    bibtex: "/assets/publications/2025_Sky/bibtex.txt"
     #    selected: y
     #
-
