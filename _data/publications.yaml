@@ -14,13 +14,13 @@ papers:
     paper_pdf: "/assets/publications/2026_benelux/Manaa__Book_of_Abstracts_45th_Benelux_Meeting.pdf"
     selected: y
 
-  # - title: '<a href="https://zmanaa.github.io/koetc/">KOETC: Koopman Operator-Based Event-Triggered Control from Data</a>'
-  #   image: "/assets/publications/2024_KOETC/image.png"
-  #   authors: "<b>Zeyad M. Manaa</b>, Ayman M. Abdallah, Mohamed Ismail, Sami El-Ferik"
-  #   venue: "submitted to Results in Engineering"
-  #   paper_pdf: "/assets/publications/2024_KOETC/koetc.pdf"
-  #   bibtex: "/assets/publications/2024_KOETC/bibtex.txt"
-  #   selected: n
+  - title: '<a href="https://zmanaa.github.io/koetc/">KOETC: Koopman Operator-Based Event-Triggered Control from Data</a>'
+    image: "/assets/publications/2024_KOETC/image.png"
+    authors: "<b>Zeyad M. Manaa</b>, Ayman M. Abdallah, Mohamed Ismail, Sami El-Ferik"
+    venue: "submitted to Results in Engineering"
+    paper_pdf: "/assets/publications/2024_KOETC/koetc.pdf"
+    bibtex: "/assets/publications/2024_KOETC/bibtex.txt"
+    selected: n
 
   - title: "Novel airfoil for improved supersonic aerodynamic performance"
     image: "/assets/publications/2024_Airfoil/fig.png"
