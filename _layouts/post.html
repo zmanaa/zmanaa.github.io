@@ -13,7 +13,7 @@ layout: default
     {% endfor %}
   </div>
 
-  <div class="post-content">
+  <div class="post-content" {% if page.dir %}dir="{{ page.dir }}" style="text-align: {% if page.dir == 'rtl' %}right{% else %}left{% endif %};"{% endif %}>
     {{ content }}
   </div>
   <div class="share-buttons" style="margin: 30px 0;">
