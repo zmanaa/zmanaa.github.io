@@ -7,6 +7,11 @@ title: Blog
     <ul class="posts-list" style="list-style: none; margin-left: 0;">
         {% for post in site.posts %}
         <li class="post-item" data-tags="{{ post.tags | join: ',' }}" style="margin-bottom: 2rem;">
+            {% if post.cover_image %}
+            <a href="{{ post.url | prepend: site.baseurl }}">
+                <div style="background-image: url('{{ post.cover_image | prepend: site.baseurl }}'); background-size: cover; background-position: center; height: 200px; border-radius: 6px; margin-bottom: 1rem;"></div>
+            </a>
+            {% endif %}
             <h5>
                 <a href="{{ post.url | prepend: site.baseurl }}"
                     style="text-decoration: none; color: var(--text-dark);">

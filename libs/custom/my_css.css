@@ -44,7 +44,8 @@
 }
 
 [data-theme="dark"] .navbar,
-[data-theme="dark"] .navbar-spacer {
+[data-theme="dark"] .navbar-spacer,
+[data-theme="dark"] .has-docked-nav .navbar {
   background: rgba(33, 37, 43, 0.75);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -401,6 +402,11 @@ a:hover {
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
 
   .has-docked-nav .navbar-spacer {

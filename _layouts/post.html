@@ -5,8 +5,8 @@ layout: default
 <div class="post-cover" style="background-image: url('{{ page.cover_image | prepend: site.baseurl }}'); background-size: cover; background-position: center; height: 320px; width: 100%; margin-bottom: 30px; border-radius: 6px;"></div>
 {% endif %}
 <div class="docs-section">
-  <h4>{{ page.title }}</h4>
-  <p style="color: #999; font-size: 0.9em;">
+  <h4 {% if page.dir %}dir="{{ page.dir }}" style="text-align: {% if page.dir == 'rtl' %}right{% else %}left{% endif %};"{% endif %}>{{ page.title }}</h4>
+  <p style="color: #999; font-size: 0.9em; {% if page.dir == 'rtl' %}text-align: right;{% endif %}">
     {{ page.date | date: "%B %d, %Y" }}
   </p>
 
