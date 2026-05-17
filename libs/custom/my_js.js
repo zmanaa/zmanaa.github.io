@@ -25,9 +25,35 @@ $(document).ready(function () {
     $('a[href^="#"]').on('click', smoothScroll)
     buildSnippets();
     setActiveNav();
+    initHamburger();
     // Default to light theme and clear any saved preference
     document.documentElement.setAttribute('data-theme', 'light');
     localStorage.removeItem('theme');
+  }
+
+  function initHamburger() {
+    var $hamburger = $('#nav-hamburger');
+    var $navList = $('#navbar-list');
+
+    $hamburger.on('click', function (e) {
+      e.stopPropagation();
+      $hamburger.toggleClass('open');
+      $navList.toggleClass('is-open');
+    });
+
+    // Close menu when a nav link is clicked
+    $navList.on('click', '.navbar-link', function () {
+      $hamburger.removeClass('open');
+      $navList.removeClass('is-open');
+    });
+
+    // Close menu when clicking outside
+    $document.on('click', function (e) {
+      if (!$(e.target).closest('.navbar').length) {
+        $hamburger.removeClass('open');
+        $navList.removeClass('is-open');
+      }
+    });
   }
 
   function setActiveNav() {
