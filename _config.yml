@@ -1,6 +1,8 @@
-source:      .
+source: .
 destination: ./_site
-includes:    ./_includes
+includes: ./_includes
+url: "https://zmanaa.github.io"
+baseurl: ""
 
 collections:
   projects:
