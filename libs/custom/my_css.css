@@ -333,6 +333,51 @@ a:not(.navbar-link):not(.button):not(.tag):not([class]):hover::before {
   transition: width 0.3s ease;
 }
 
+/* Liquid glass bubble on navbar links */
+.navbar-link::before {
+  content: '';
+  position: absolute;
+  inset: 20% -10px;
+  border-radius: 10px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.12) 50%,
+    rgba(255, 255, 255, 0.25) 100%
+  );
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow:
+    0 2px 14px rgba(0, 0, 0, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  opacity: 0;
+  transform: scale(0.88);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.navbar-link:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+[data-theme="dark"] .navbar-link::before {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.10) 0%,
+    rgba(255, 255, 255, 0.03) 50%,
+    rgba(255, 255, 255, 0.07) 100%
+  );
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 2px 14px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
 .navbar-link:hover::after,
 .navbar-link.active::after {
   width: 100%;
