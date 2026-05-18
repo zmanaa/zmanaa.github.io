@@ -6,9 +6,22 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>{{ site.data.main_info.name }}</title>
-  <meta name="description" content="Homepage of Zeyad Manaa">
+  <title>{% if page.title %}{{ page.title }} | {{ site.data.main_info.name }}{% else %}{{ site.data.main_info.name }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncate: 160 }}{% else %}Homepage of Zeyad Manaa{% endif %}">
   <meta name="author" content="Zeyad Manaa">
+
+  <!-- Open Graph / WhatsApp / Social sharing
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.data.main_info.name }}{% endif %}">
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncate: 160 }}{% else %}Homepage of Zeyad Manaa{% endif %}">
+  {% if page.cover_image %}
+  <meta property="og:image" content="{{ site.url }}{{ page.cover_image }}">
+  {% endif %}
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
