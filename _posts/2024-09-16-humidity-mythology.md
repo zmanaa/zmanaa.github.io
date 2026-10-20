@@ -5,6 +5,7 @@ date: 2024-09-16
 tags: [أدب, تأملات]
 dir: rtl
 cover_image: /assets/imgs/blog/img_blog_nameem_humid.png
+share_image: /assets/imgs/share/img_blog_nameem_humid.jpg
 ---
 
 الدمام - المملكة العربية السعودية

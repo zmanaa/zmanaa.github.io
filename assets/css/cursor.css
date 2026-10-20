@@ -1,0 +1,124 @@
+/* Contextual cursor: dot by default, arrow over links, bar over text. */
+
+.cursor-mode-dot,
+.cursor-mode-dot a[href],
+.cursor-mode-dot button,
+.cursor-mode-dot summary,
+.cursor-mode-dot [role="button"],
+.cursor-mode-dot p,
+.cursor-mode-dot h1,
+.cursor-mode-dot h2,
+.cursor-mode-dot h3,
+.cursor-mode-dot h4,
+.cursor-mode-dot li,
+.cursor-mode-dot blockquote,
+.cursor-mode-dot img,
+.cursor-mode-dot canvas,
+.cursor-mode-dot .expand-word,
+.cursor-mode-dot label,
+.cursor-mode-dot input[type="range"] {
+  cursor: none !important;
+}
+
+.cursor-mode-dot input[type="text"],
+.cursor-mode-dot textarea,
+.cursor-mode-dot iframe {
+  cursor: auto !important;
+}
+
+.site-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  will-change: transform;
+  transition: opacity 0.15s;
+  mix-blend-mode: difference;
+}
+
+.site-cursor[data-visible="true"] {
+  opacity: 1;
+}
+
+.site-cursor__dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.15s,
+    transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1),
+    width 0.22s cubic-bezier(0.2, 0.8, 0.2, 1),
+    height 0.22s cubic-bezier(0.2, 0.8, 0.2, 1),
+    border-radius 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.site-cursor__arrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 26px;
+  height: 26px;
+  opacity: 0;
+  transform: translate(-6px, -6px) scale(0.6);
+  transition: opacity 0.18s cubic-bezier(0.2, 0.8, 0.2, 1),
+    transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.site-cursor[data-mode="arrow"] .site-cursor__arrow {
+  opacity: 1;
+  transform: translate(-6px, -6px) scale(1);
+}
+
+.site-cursor[data-mode="arrow"] .site-cursor__dot {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.4);
+}
+
+/* Crosshair over figures: two thin lines drawn with gradients */
+.site-cursor__cross {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5);
+  background:
+    linear-gradient(#fff, #fff) center / 1.5px 100% no-repeat,
+    linear-gradient(#fff, #fff) center / 100% 1.5px no-repeat;
+  transition: opacity 0.18s cubic-bezier(0.2, 0.8, 0.2, 1),
+    transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.site-cursor[data-mode="cross"] .site-cursor__cross {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.site-cursor[data-mode="cross"] .site-cursor__dot {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.4);
+}
+
+.site-cursor[data-mode="text"] .site-cursor__dot {
+  width: 2px;
+  height: 22px;
+  border-radius: 1px;
+}
+
+.site-cursor[data-pressed="true"] .site-cursor__dot {
+  transform: translate(-50%, -50%) scale(0.7);
+}
+
+
+/* Reduced motion: the cursor still follows the pointer, but its shape changes are instant */
+@media (prefers-reduced-motion: reduce) {
+  .site-cursor,
+  .site-cursor__dot,
+  .site-cursor__arrow,
+  .site-cursor__cross {
+    transition: none;
+  }
+}

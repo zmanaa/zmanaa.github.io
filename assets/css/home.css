@@ -1,0 +1,63 @@
+.hero-greeting {
+  font-size: 0.9rem !important;
+  letter-spacing: 0.02rem;
+  color: var(--editorial-muted) !important;
+  margin-bottom: 1.2rem !important;
+}
+
+.expand-word {
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.expand-word:focus-visible {
+  outline: 2px solid var(--editorial-muted);
+  outline-offset: 2px;
+}
+
+/* "It's nice to meet you." opens one step at a time; each new piece fades in and its emoji gives a small wiggle */
+.reveal[hidden] {
+  display: none;
+}
+
+.reveal {
+  animation: reveal-in 0.9s ease-out both;
+}
+
+.emoji {
+  display: inline-block;
+}
+
+.expand-word[aria-expanded="true"] > .emoji {
+  animation: emoji-wiggle 0.8s ease-in-out both;
+}
+
+/* each step comes into focus: blurred and transparent at first, sharpening as it settles into place */
+@keyframes reveal-in {
+  from { opacity: 0; filter: blur(10px); transform: translateY(0.3em); }
+  60% { opacity: 1; }
+  to { opacity: 1; filter: blur(0); transform: none; }
+}
+
+/* reduced motion keeps the blur-and-fade (no movement), since that is a focus change rather than motion */
+@keyframes reveal-in-calm {
+  from { opacity: 0; filter: blur(10px); }
+  60% { opacity: 1; }
+  to { opacity: 1; filter: blur(0); }
+}
+
+@keyframes emoji-wiggle {
+  0%, 100% { transform: rotate(0); }
+  30% { transform: rotate(-14deg) scale(1.15); }
+  60% { transform: rotate(10deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    animation: reveal-in-calm 0.9s ease-out both;
+  }
+
+  .expand-word[aria-expanded="true"] > .emoji {
+    animation: none;
+  }
+}

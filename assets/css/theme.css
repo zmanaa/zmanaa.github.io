@@ -1,0 +1,331 @@
+/* Day theme only: a near-white grey page with black and grey text. (The dark theme and the leaf shadows are
+   archived in misc/leafshadow.) */
+
+:root {
+  color-scheme: light;
+  --editorial-bg: #fafaf9;
+  --editorial-text: rgba(0, 0, 0, 0.88);
+  --editorial-text-secondary: rgba(0, 0, 0, 0.72);
+  --editorial-muted: rgba(0, 0, 0, 0.55);
+  --editorial-border: rgba(0, 0, 0, 0.12);
+  --editorial-surface: rgba(0, 0, 0, 0.08);
+  --editorial-surface-strong: rgba(0, 0, 0, 0.13);
+  --link: var(--editorial-text);
+  --link-underline: rgba(0, 0, 0, 0.35);
+  --link-hover-bg: rgba(0, 0, 0, 0.09);
+  --btn-bg: #1a1a1a;
+  --btn-text: #fff;
+  --primary-color: var(--editorial-text);
+  --clock-face-1: #ffffff;
+  --clock-face-2: #ecebe8;
+  --clock-rim: #dedcd8;
+  --clock-ring: rgba(0, 0, 0, 0.06);
+  --clock-hand: #3b3b42;
+  --clock-dot: rgba(0, 0, 0, 0.7);
+  --clock-shadow: rgba(0, 0, 0, 0.08);
+  --shelf-bg: transparent;
+}
+
+html {
+  background-color: var(--editorial-bg);
+}
+
+html body,
+html body.editorial-page {
+  background: transparent !important;
+  color: var(--editorial-text) !important;
+}
+
+/* ---------- Type: the base was 15px with 7-9px labels, so everything goes up one step ---------- */
+html {
+  font-size: 68.75%; /* 1rem = 11px */
+}
+
+.hero-intro p {
+  font-size: 1.75rem;
+  line-height: 1.7;
+}
+
+.hero-greeting {
+  font-size: 1.4rem !important;
+}
+
+.hero-identity .role-label {
+  font-size: 1.1rem;
+}
+
+.hero-identity .name {
+  font-size: 1.7rem;
+}
+
+.hero-identity .identity-links {
+  font-size: 1.8rem;
+}
+
+.hero-identity .identity-email {
+  font-size: 1.4rem;
+}
+
+.hero-identity .affiliation {
+  font-size: 1.3rem;
+}
+
+.editorial-page .navbar-link {
+  font-size: 1.3rem;
+}
+
+.bowl-note {
+  font-size: 1.15rem !important;
+}
+
+.hero-intro > div[style*="italic"] {
+  font-size: 1.4rem !important;
+}
+
+.editorial-page .paper .button {
+  font-size: 1.25rem;
+}
+
+/* ---------- Rules and nav ---------- */
+.editorial-page .navbar {
+  border-bottom-color: var(--editorial-border) !important;
+  /* at rest the nav is invisible chrome: no blur or fade mask */
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+.editorial-page .navbar-spacer {
+  background: transparent !important;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+/* when the nav docks to the top it frosts and fades out at its lower edge, so content scrolls under it softly */
+.editorial-page.has-docked-nav .navbar {
+  background: color-mix(in srgb, var(--editorial-bg) 70%, transparent) !important;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  -webkit-mask-image: linear-gradient(to bottom, black 62%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 62%, transparent 100%);
+}
+
+.editorial-page .docs-section {
+  border-top-color: var(--editorial-border);
+}
+
+/* Nav links: a roomy pill on hover, a thin underline for the current page. Black and grey only.
+   Spacing is fluid so all six links stay on one line from tablet width up (below 750px the hamburger takes over). */
+.editorial-page .navbar-link {
+  display: inline-block;
+  line-height: 1.4;
+  font-size: clamp(1.05rem, 1.15vw, 1.3rem);
+  letter-spacing: clamp(0.06rem, 0.14vw, 0.18rem);
+  padding: 0.7rem clamp(0.7rem, 1.4vw, 1.4rem);
+  margin: 0 clamp(0px, 0.3vw, 6px);
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+@media (min-width: 750px) {
+  .editorial-page .navbar-list {
+    flex-wrap: nowrap;
+    max-width: 100%;
+  }
+
+  .editorial-page .navbar-link {
+    margin-left: clamp(0px, 0.3vw, 6px);
+    margin-right: clamp(0px, 0.3vw, 6px);
+  }
+}
+
+.editorial-page .navbar-link::before {
+  display: none !important; /* the old glass bubble was a tight box around the text */
+}
+
+.editorial-page .navbar-link::after {
+  left: clamp(0.7rem, 1.4vw, 1.4rem);
+  right: clamp(0.7rem, 1.4vw, 1.4rem);
+  bottom: 0.35rem;
+  width: auto;
+  height: 1px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transition: transform 0.2s;
+}
+
+.editorial-page .navbar-link:hover {
+  background-color: var(--editorial-surface-strong);
+  color: var(--editorial-text) !important;
+}
+
+.editorial-page .navbar-link.active {
+  color: var(--editorial-text) !important;
+}
+
+.editorial-page .navbar-link.active::after {
+  transform: scaleX(1);
+}
+
+::selection {
+  background: var(--editorial-surface-strong);
+}
+
+/* ---------- Links ----------
+   Coloured for contrast on each background. The hover highlight is drawn per line box, so a link that wraps onto
+   a second line gets two clean pills instead of one broken block. */
+.editorial-page a:not(.navbar-link):not(.button):not(.tag) {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-color: var(--link-underline);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  padding: 0.05em 0.3em;
+  margin: 0 -0.3em;
+  border-radius: 0.5em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  transition: background-color 0.15s, color 0.15s, text-decoration-color 0.15s;
+}
+
+.editorial-page a:not(.navbar-link):not(.button):not(.tag):hover {
+  color: var(--link);
+  text-decoration-color: currentColor;
+  background-color: var(--link-hover-bg) !important;
+}
+
+/* retire the old "liquid glass" ::before: it was sized from the whole inline box, which breaks across lines */
+.editorial-page a:not(.navbar-link):not(.button):not(.tag)::before {
+  display: none !important;
+}
+
+.editorial-page .identity-links a,
+.editorial-page .paper-buttons a {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* News dates were hard-coded red in the markup */
+#news li > b {
+  color: var(--editorial-muted) !important;
+}
+
+/* ---------- Buttons ---------- */
+.editorial-page .button,
+.editorial-page button {
+  color: var(--editorial-text);
+  border-color: var(--editorial-border);
+  background: transparent;
+}
+
+.editorial-page .button:hover,
+.editorial-page button:hover {
+  background: var(--btn-bg);
+  border-color: var(--btn-bg);
+  color: var(--btn-text);
+}
+
+/* ---------- Hover surfaces: roomy, rounded, aligned with the text column ---------- */
+.editorial-page .paper,
+.editorial-page .course,
+.editorial-page .post-item,
+.editorial-page #news li {
+  border-radius: 18px;
+  transition: background-color 0.2s;
+}
+
+.editorial-page .paper,
+.editorial-page .course {
+  padding: 28px 24px;
+  margin-left: -24px;
+  margin-right: -24px;
+}
+
+.editorial-page .post-item {
+  padding: 24px;
+  margin-left: -24px;
+  margin-right: -24px;
+}
+
+.editorial-page #news li {
+  padding: 10px 16px;
+  margin-left: -16px;
+  margin-right: -16px;
+}
+
+.editorial-page .paper:hover,
+.editorial-page .course:hover,
+.editorial-page .post-item:hover,
+.editorial-page #news li:hover {
+  background: var(--editorial-surface) !important;
+  box-shadow: none;
+}
+
+@media (max-width: 800px) {
+  .editorial-page .paper,
+  .editorial-page .course,
+  .editorial-page .post-item {
+    padding: 20px 14px;
+    margin-left: -14px;
+    margin-right: -14px;
+  }
+}
+
+/* ---------- Expandable phrases ----------
+   Links are told apart by an underline. Expandable phrases use a different channel: a soft grey pill, no underline. */
+.expand-word,
+.chip {
+  padding: 0.02em 0.55em;
+  margin: 0 0.1em;
+  border: none !important;
+  border-radius: 999px;
+  background-color: var(--editorial-surface);
+  text-decoration: none;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  transition: background-color 0.15s;
+}
+
+.expand-word:hover,
+.expand-word[aria-expanded="true"] {
+  background-color: var(--editorial-surface-strong);
+}
+
+/* ---------- Leftovers with hard-coded greys ---------- */
+.experience-item .title-line,
+.experience-item .meta-line .location,
+.experience-item .title-line .company {
+  color: var(--editorial-text);
+}
+
+.experience-item .meta-line .dates {
+  color: var(--editorial-muted);
+}
+
+/* ---------- Clock ---------- */
+html #bowl {
+  background: radial-gradient(circle at 40% 38%, var(--clock-face-1) 60%, var(--clock-face-2) 100%);
+  border-color: var(--clock-rim);
+  box-shadow: 0 6px 20px var(--clock-shadow);
+  transition: background 0.3s, border-color 0.3s;
+}
+
+html #bowl::before {
+  border-color: var(--clock-ring);
+}
+
+html #hour,
+html #minute {
+  background: var(--clock-hand);
+}
+
+html #dot {
+  background: var(--clock-dot);
+}
+
+html #time-label {
+  color: var(--editorial-muted);
+}

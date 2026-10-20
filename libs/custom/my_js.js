@@ -26,9 +26,6 @@ $(document).ready(function () {
     buildSnippets();
     setActiveNav();
     initHamburger();
-    // Default to light theme and clear any saved preference
-    document.documentElement.setAttribute('data-theme', 'light');
-    localStorage.removeItem('theme');
     // Recompute navbar offset after all assets (images etc.) load
     // so the docking position is accurate on content-heavy pages
     $(window).on('load', function () {

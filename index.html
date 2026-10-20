@@ -1,9 +1,11 @@
 ---
 layout: default
+description: "Zeyad Manaa, PhD researcher in Dynamics and Control at TU/e. Data-driven modeling and control, Koopman operators, event-triggered control."
 ---
 <div class="hero-editorial">
   <!-- Bowl Clock (Moved to top) -->
   <link rel="stylesheet" href="{{ '/assets/css/shelf.css' | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ '/assets/css/home.css' | prepend: site.baseurl }}">
   <div class="vignette-clock-container" style="margin-bottom: 3rem;">
     <div id="bowl">
       <div id="dot"></div>
@@ -15,6 +17,7 @@ layout: default
   </div>
 
   <div class="hero-intro">
+    <p class="hero-greeting" id="greeting">Hello.</p>
     <h1>Hello, I'm Zeyad.</h1>
     <p>
       I am a doctoral researcher in the <a
@@ -30,22 +33,17 @@ layout: default
         City of Science and Technology</a>, Egypt.
     </p>
     <p>
-      I like calligraphy and typography, something I do to relax and to be present at the moment. You can see sample of
-      my
-      work <a href="https://dribbble.com/zeyad_mana3//">here</a>.
-      I also like history, and anthropology. Especially, how human evolved and invented many constructs to survive. I
-      also, sometimes, <a href="https://nameem.com/zmmanaa-gmail-com//">wirte</a> articles in Arabic.
+      My research focuses on the confidentiality and security of control systems, particularly under sensor attacks.
+      I also work on data-driven modeling and control to build better models of dynamical systems
+      to design better controllers.
     </p>
-    <p>
-      Recently, my research focus is on getting better models to build better controllers for dynamical systems using
-      data-driven modeling and control methods, particularly using the Koopman operator for global linearization.
-      I am also developing event-triggered control frameworks and exploring adaptive and model predictive control
-      techniques.
-      Additionally, I have worked on the data-driven discovery of UAV dynamics through sparse identification methods.
+
+    <p class="hero-closing">
+      <span class="expand-word" role="button" tabindex="0" aria-expanded="false" aria-controls="x-1">Off the clock.</span><span class="reveal" id="x-1" hidden> I like <span class="expand-word" role="button" tabindex="0" aria-expanded="false" aria-controls="x-2">calligraphy and typography <span class="emoji">✍️</span></span><span class="reveal" id="x-2" hidden> (see my work <a href="https://dribbble.com/zeyad_mana3//">here</a>), <span class="expand-word" role="button" tabindex="0" aria-expanded="false" aria-controls="x-3">history and anthropology <span class="emoji">🏺</span></span><span class="reveal" id="x-3" hidden>, <span class="expand-word" role="button" tabindex="0" aria-expanded="false" aria-controls="x-4">writing in Arabic <span class="emoji">📝</span></span><span class="reveal" id="x-4" hidden> (read them <a href="https://nameem.com/zmmanaa-gmail-com//">here</a>), <span class="expand-word" role="button" tabindex="0" aria-expanded="false" aria-controls="x-5">notebook making <span class="emoji">📓</span></span><span class="reveal" id="x-5" hidden>, and <span class="chip">film photography <span class="emoji">🎞️</span></span>.</span></span></span></span></span>
     </p>
 
     <div style="margin-top: 3rem; color: var(--editorial-muted); font-style: italic; font-size: 0.95rem;">
-      Keywords: Data-driven modeling, Control theory, Optimization, Model reduction.
+      Keywords: Confidentiality and security of control systems, Control theory, Data-driven modeling, Optimization, Model reduction.
     </div>
   </div>
 </div>
@@ -187,6 +185,7 @@ layout: default
 </section>
 
 <!-- ========== Publications Preview ========== -->
+<link rel="stylesheet" href="{{ '/assets/css/publications.css' | prepend: site.baseurl }}">
 <section class="docs-section" id="publications-preview">
   <h4>Selected Publications</h4>
   {% assign selected_papers = site.data.publications.papers | where: "selected", "y" | limit: 2 %}
@@ -308,3 +307,5 @@ layout: default
 </div>
 
 </div>
+<script src="{{ '/assets/js/home.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/assets/js/publications.js' | prepend: site.baseurl }}"></script>

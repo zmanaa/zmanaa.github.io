@@ -5,6 +5,7 @@ date: 2024-09-16
 tags: [أدب, أفكار]
 dir: rtl
 cover_image: /assets/imgs/blog/img_blog_worst_person.jpg
+share_image: /assets/imgs/share/img_blog_worst_person.jpg
 ---
 
 القاهرة - مصر

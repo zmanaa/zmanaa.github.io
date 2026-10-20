@@ -1,0 +1,35 @@
+.paper .title {
+  cursor: default;
+}
+
+.paper-preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9000;
+  max-width: 420px;
+  padding: 6px;
+  border-radius: 10px;
+  background: var(--editorial-bg);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.22);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.paper-preview[data-visible="true"] {
+  opacity: 1;
+}
+
+.paper-preview img {
+  display: block;
+  max-width: 100%;
+  max-height: 320px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .paper-preview {
+    transition: none;
+  }
+}

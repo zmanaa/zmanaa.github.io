@@ -1,8 +1,10 @@
 ---
 layout: default
 title: Publications
+description: "Papers, posters and talks on data-driven modeling and control by Zeyad Manaa."
 ---
 <!-- ========== PUBLICATIONS ========== -->
+<link rel="stylesheet" href="{{ '/assets/css/publications.css' | prepend: site.baseurl }}">
 <div class="docs-section" id="publications">
     <h4>Publications</h4>
 
@@ -15,7 +17,9 @@ title: Publications
                 <div class="row">
                     <div class="four columns">
                         <div class="figure">
-                            <img src="{{ paper.image }}" width="100%">
+                            {% if paper.image != "" %}
+                            <img src="{{ paper.image | prepend: site.baseurl }}" width="100%" alt="">
+                            {% endif %}
                         </div>
                     </div>
                     <div class="eight columns">
@@ -46,7 +50,7 @@ title: Publications
                             {% endif %}
 
                             {% if paper.bibtex %}
-                            <a class="button" href="{{ paper.bibtex }}" target="_blank">BibTeX</a>
+                            <a class="button" href="{{ paper.bibtex | prepend: site.baseurl }}" data-bibtex="{{ paper.bibtex | prepend: site.baseurl }}" target="_blank" title="Copy BibTeX">BibTeX</a>
                             {% endif %}
                         </div>
                     </div>
@@ -56,3 +60,4 @@ title: Publications
         </div>
     </div>
 </div>
+<script src="{{ '/assets/js/publications.js' | prepend: site.baseurl }}"></script>

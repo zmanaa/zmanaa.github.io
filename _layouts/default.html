@@ -7,21 +7,35 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <title>{% if page.title %}{{ page.title }} | {{ site.data.main_info.name }}{% else %}{{ site.data.main_info.name }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncate: 160 }}{% else %}Homepage of Zeyad Manaa{% endif %}">
   <meta name="author" content="Zeyad Manaa">
+
+  {%- comment -%}
+    Share image: share_image (a 1200x630 file) > cover_image > default.
+    Description: description > excerpt > default.
+  {%- endcomment -%}
+  {% assign share_title = page.title | default: site.data.main_info.name %}
+  {% assign share_image = page.share_image | default: page.cover_image | default: "/assets/logos/nerd.png" %}
+  {% capture share_description %}{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}Homepage of Zeyad Manaa{% endif %}{% endcapture %}
+  <meta name="description" content="{{ share_description | strip | escape }}">
 
   <!-- Open Graph / WhatsApp / Social sharing
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.data.main_info.name }}{% endif %}">
-  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncate: 160 }}{% else %}Homepage of Zeyad Manaa{% endif %}">
-  {% if page.cover_image %}
-  <meta property="og:image" content="{{ site.url }}{{ page.cover_image }}">
-  {% endif %}
+  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+  <meta property="og:title" content="{{ share_title | escape }}">
+  <meta property="og:description" content="{{ share_description | strip | escape }}">
+  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{{ share_image }}">
+  <meta property="og:image:alt" content="{{ share_title | escape }}">
+  {% if page.share_image %}
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  {% endif %}
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ share_title | escape }}">
+  <meta name="twitter:description" content="{{ share_description | strip | escape }}">
+  <meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}{{ share_image }}">
+
+
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -37,6 +51,7 @@
   <link rel="stylesheet" href={{ "/libs/external/skeleton/skeleton.css" | prepend: site.baseurl }}>
   <link rel="stylesheet" href={{ "/libs/custom/my_css.css" | prepend: site.baseurl }}>
   <link rel="stylesheet" href={{ "/assets/css/editorial.css" | prepend: site.baseurl }}>
+  <link rel="stylesheet" href={{ "/assets/css/theme.css" | prepend: site.baseurl }}>
 
   <!-- JQuery
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -65,27 +80,16 @@
   <!--<link rel="stylesheet" href={{ "/libs/external/github-prettify-theme.css" | prepend: site.baseurl }}>-->
   <script src={{ "/libs/custom/my_js.js" | prepend: site.baseurl }}></script>
 
-  <!-- Open Graph / Social Sharing
+  <!-- Math (opt in per page with `math: true` in the front matter)
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
-  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.data.main_info.name }}{% endif %}">
-  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}Homepage of Zeyad Manaa{% endif %}">
-  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
-  {% if page.cover_image %}
-  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{{ page.cover_image }}">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  {% else %}
-  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/logos/nerd.png">
-  {% endif %}
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.data.main_info.name }}{% endif %}">
-  <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}Homepage of Zeyad Manaa{% endif %}">
-  {% if page.cover_image %}
-  <meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}{{ page.cover_image }}">
-  {% else %}
-  <meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/assets/logos/nerd.png">
+  {% if page.math %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.css"
+    integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/katex.min.js"
+    integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.11/contrib/auto-render.min.js"
+    integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+    onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '\\(', right: '\\)', display: false}, {left: '\\[', right: '\\]', display: true}]});"></script>
   {% endif %}
 
   <!-- Favicon
@@ -182,6 +186,9 @@
     </div>
 
   </div>
+
+  <link rel="stylesheet" href={{ "/assets/css/cursor.css" | prepend: site.baseurl }}>
+  <script src={{ "/assets/js/cursor.js" | prepend: site.baseurl }}></script>
 
   <!-- Google Analytics -->
   {% include google_analytics.html %}

@@ -1,0 +1,72 @@
+/* Dark theme tokens and the theme toggle button, archived when the site went day-only.
+   To bring the dark theme back: load theme-toggle.js in <head>, add this file after theme.css, and change the
+   `html` rules in theme.css back to `html[data-theme]`. leafshadow.js has a matching dark preset (navy + blue streaks). */
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --editorial-bg: #0f1219;
+  --editorial-text: rgba(255, 255, 255, 0.92);
+  --editorial-text-secondary: rgba(255, 255, 255, 0.78);
+  --editorial-muted: rgba(255, 255, 255, 0.58);
+  --editorial-border: rgba(255, 255, 255, 0.16);
+  --editorial-surface: rgba(255, 255, 255, 0.07);
+  --editorial-surface-strong: rgba(255, 255, 255, 0.13);
+  --link-underline: rgba(255, 255, 255, 0.4);
+  --link-hover-bg: rgba(255, 255, 255, 0.12);
+  --btn-bg: #f3f4f0;
+  --btn-text: #0a0d18;
+  --clock-face-1: #232a3d;
+  --clock-face-2: #171c2b;
+  --clock-rim: #2d3550;
+  --clock-ring: rgba(255, 255, 255, 0.08);
+  --clock-hand: #e4e7f0;
+  --clock-dot: rgba(255, 255, 255, 0.8);
+  --clock-shadow: rgba(0, 0, 0, 0.45);
+
+  /* the existing dark rules in my_css.css read these */
+  --text-dark: var(--editorial-text);
+  --text-medium: var(--editorial-text-secondary);
+  --text-light: var(--editorial-muted);
+  --border-color: var(--editorial-border);
+}
+
+[data-theme="dark"] .hero-identity .small-profile-pic {
+  filter: grayscale(100%) contrast(1.05) brightness(0.92);
+}
+
+/* ---------- Theme toggle ---------- */
+.theme-toggle {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  z-index: 1000;
+  width: 36px;
+  height: 36px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--editorial-border);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--editorial-text);
+  font-size: 17px;
+  line-height: 34px;
+  text-align: center;
+  letter-spacing: 0;
+  text-transform: none;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.theme-toggle:hover {
+  border-color: var(--editorial-text);
+  background: transparent;
+  color: var(--editorial-text);
+  transform: rotate(20deg) scale(1.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle {
+    transition: none;
+  }
+}
+

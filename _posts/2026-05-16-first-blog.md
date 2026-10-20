@@ -5,6 +5,7 @@ date: 2026-05-16
 tags: [أدب, قاهرة]
 dir: rtl
 cover_image: /assets/imgs/blog/cairo.jpg
+share_image: /assets/imgs/share/cairo.jpg
 ---
 
 عبد المنعم رياض - القاهرة - مصر.
