@@ -329,3 +329,22 @@ html #dot {
 html #time-label {
   color: var(--editorial-muted);
 }
+
+/* Letterboxd icon (no Font Awesome glyph exists): three overlapping dots, sized like the neighbouring icons */
+.icon-letterboxd {
+  width: 1.7em;
+  height: 0.9em;
+  vertical-align: -0.1em;
+}
+
+/* Avatar and the icon row share a column and are centred on each other */
+.identity-media {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.identity-media .small-profile-pic {
+  margin-left: 0;
+  margin-right: 0;
+}
